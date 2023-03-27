@@ -1,0 +1,121 @@
+.ecocart-industry-list {
+  overflow: hidden;
+  
+  .container {
+    padding-bottom: 61px;
+    padding-top: 78px;
+    position: relative;
+  }
+}
+
+.ecocart-industry-list__img {
+  bottom: 20px;
+  display: none;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-industry-list__card {
+  background-color: $color-dark-green;
+  border-radius: 5px;
+  color: $color-white;
+  height: 100%;
+  padding: 0 30px 28px;
+}
+
+.ecocart-industry-list__col {
+  padding: 12px;
+}
+
+.ecocart-industry-list__row {
+  margin: 66px -12px 0;
+}
+
+.ecocart-industry-list__card-link {
+  margin-top: 38px;
+}
+
+#js-ecocart-industry-list__card-animation-0 {
+  height: 160px;
+  margin: 0 auto;
+  width: 177px;
+}
+
+#js-ecocart-industry-list__card-animation-1 {
+  height: 160px;
+  margin: 0 auto;
+  width: 177px;
+}
+
+#js-ecocart-industry-list__card-animation-2 {
+  height: 160px;
+  margin: 0 auto;
+  width: 177px;
+}
+
+#js-ecocart-industry-list__card-animation-3 {
+  height: 160px;
+  margin: 0 auto;
+  width: 177px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-industry-list__card {
+    text-align: center;
+  }
+}
+
+@media(min-width: 600px) {
+  .ecocart-industry-list__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ecocart-industry-list__col {
+    width: 50%;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-industry-list {
+    .container {
+      padding-bottom: 124px;
+      padding-top: 88px;
+    }
+  }
+
+  .ecocart-industry-list__row {
+    margin: 124px -12px 0;
+  }
+
+  .ecocart-industry-list__card {
+    padding: 30px 30px 53px;
+  }
+
+  .ecocart-industry-list__card-link {
+    margin-top: 57px;
+  }
+
+  .ecocart-industry-list__card-row {
+    display: flex;
+  }
+
+  .ecocart-industry-list__card-left-col {
+    width: 180px;
+  }
+
+  .ecocart-industry-list__card-right-col {
+    padding-top: 38px;
+    width: calc(100% - 150px);
+  }
+
+  .ecocart-industry-list__img {
+    display: block;
+  }
+}

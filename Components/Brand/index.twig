@@ -1,0 +1,42 @@
+<section class="ecocart-brand">
+    <div class="container">
+        <div class="ecocart-brand__dot-wrapper">
+            <div class="ecocart-brand__dot">
+                <img
+                    class="lazyload"
+                    data-src="{{ dot_desktop }}"
+                    data-sizes="auto"
+                    alt="dot desktop"
+                />
+            </div>
+        </div>
+        <div class="ecocart-brand__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile"
+            />
+        </div>
+        <div class="ecocart-brand__row">
+            <div class="ecocart-brand__right-col">
+                <div class="ecocart-brand__right-icon">
+                    <img
+                        class="lazyload"
+                        data-src="{{ image.src }}"
+                        data-sizes="auto"
+                        alt="{{ image.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-brand__right-txt">{{ description }}</div>
+            </div>
+            <div class="ecocart-brand__left-col">
+                <h2>{{ title }}</h2>
+                <p>{{ content }}</p>
+                <div class="ecocart-brand__left-link">
+                    <a class="btn" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

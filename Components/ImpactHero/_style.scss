@@ -1,0 +1,145 @@
+.ecocart-impact-hero {
+  background-color: $color-dark-green;
+  padding: 111px 0 36px;
+}
+
+.ecocart-impact-hero__content {
+  color: $color-white;
+  text-align: center;
+
+  p {
+    margin-top: 16px;
+  }
+}
+
+.ecocart-impact-hero__card-row {
+  display: flex;
+}
+
+.ecocart-impact-hero__card {
+  height: 160px;
+  margin-right: 28px;
+  position: relative;
+  width: 236px;
+}
+
+.ecocart-impact-hero__card-img {
+  border-radius: 5px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 27.6%, rgba(0, 0, 0, 0.9) 100%);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.ecocart-impact-hero__card-info-row {
+  bottom: 14px;
+  display: flex;
+  left: 0;
+  padding: 0 18px;
+  position: absolute;
+  right: 0;
+}
+
+.ecocart-impact-hero__card-info-flag-col {
+  width: 15px;
+}
+
+.ecocart-impact-hero__card-info-title-col {
+  color: $color-white;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  line-height: 1.33;
+  padding-left: 15px;
+  width: calc(100% - 15px);
+}
+
+.ecocart-impact-hero__card-info-flag {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 9px;
+  margin-top: 3px;
+  width: 15px;
+}
+
+.ecocart-impact-hero__marquee-container {
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.ecocart-impact-hero__marquee {
+  align-items: center;
+  animation: ecocartImpactHeroScroll var(--duration) linear var(--delay) var(--iteration-count);
+  animation-delay: var(--delay);
+  animation-direction: var(--direction);
+  animation-play-state: var(--play);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.ecocart-impact-hero__marquee-container--top {
+  margin-top: 69px;
+}
+
+.ecocart-impact-hero__marquee-container--bottom {
+  margin-top: 24px;
+}
+
+.ecocart-impact-hero__link {
+  margin-top: 28px;
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-impact-hero {
+    height: 770px;
+    padding: 0;
+  }
+
+  .ecocart-impact-hero__content {
+    padding-top: 133px;
+
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .ecocart-impact-hero__link {
+    margin-top: 44px;
+  }
+
+  .ecocart-impact-hero__marquee-container--top {
+    margin-top: 49px;
+  }
+}
+
+@keyframes ecocartImpactHeroScroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

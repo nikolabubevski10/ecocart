@@ -1,0 +1,168 @@
+.ecocart-post-content__container {
+  margin: 0 auto;
+  max-width: 1020px;
+  padding: 0 40px;
+}
+
+.ecocart-post-content {
+  padding: 100px 0 0;
+}
+
+.ecocart-post-content__meta-text {
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.2em;
+  line-height: 1.26;
+  text-transform: uppercase;
+}
+
+.ecocart-post-content__txt {
+  padding: 46px 0 71px;
+
+  p {
+    a {
+      color: $color-teal;
+      text-decoration: underline;
+
+      button {
+        @extend %btn;
+        @extend %btn--blue;
+      }
+    }
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  * ~ p {
+    margin-top: 29px;
+  }
+
+  .wp-block-quote {
+    margin: 0;
+    padding-left: 24px;
+    position: relative;
+
+    &::before {
+      background-color: $color-teal;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 7px;
+    }
+  }
+
+  * ~ .wp-block-quote {
+    margin: 60px 0 0;
+  }
+
+  * ~ ul {
+    margin-top: 34px;
+  }
+
+  li {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.75;
+    padding-left: 24px;
+    position: relative;
+
+    &::before {
+      background-color: $color-teal;
+      border-radius: 50%;
+      content: '';
+      height: 7px;
+      left: 0;
+      position: absolute;
+      top: 10px;
+      width: 7px;
+    }
+  }
+
+  h3 {
+    letter-spacing: 0.2em;
+  }
+
+  * ~ h3 {
+    margin-top: 35px;
+  }
+
+  * ~ h2 {
+    margin-top: 32px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-post-content__meta-row {
+    text-align: center;
+  }
+  
+  .ecocart-post-content__meta-icon {
+    padding: 16px 0;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-post-content {
+    padding: 163px 0 0;
+  }
+
+  .ecocart-post-content__meta-row {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ecocart-post-content__meta-text {
+    padding: 0 22px;
+  }
+
+  .ecocart-post-content__txt {
+    padding: 64px 0 103px;
+
+    p {
+      letter-spacing: 0.5px;
+
+      a {
+        color: $color-teal;
+        text-decoration: underline;
+      }
+    }
+
+    .wp-block-quote {
+      padding-left: 55px;
+    }
+
+    * ~ .wp-block-quote {
+      margin: 39px 0 0;
+    }
+
+    * ~ ul {
+      margin-top: 46px;
+    }
+
+    li {
+      font-size: 16px;
+      padding-left: 23px;
+
+      &::before {
+        background-color: $color-teal;
+        border-radius: 50%;
+        content: '';
+        height: 7px;
+        left: 0;
+        position: absolute;
+        top: 10px;
+        width: 7px;
+      }
+    }
+
+    h3 {
+      line-height: 1.26;
+    }
+  }
+}

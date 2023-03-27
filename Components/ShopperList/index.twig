@@ -1,0 +1,90 @@
+<section class="ecocart-shopper-list">
+    <div class="ecocart-shopper-list__dot-desktop">
+        <img src="{{ dot_desktop }}" alt="dot">
+    </div>
+    <div class="ecocart-shopper-list__dot-mobile">
+        <img src="{{ dot_mobile }}" alt="dot">
+    </div>
+    <div class="container">
+        <div class="dot-title">
+            <h3>{{ title }}</h3>
+        </div>
+        <div class="ecocart-shopper-list__row-wrapper">
+            {% for index, item in list %}
+                <div class="ecocart-shopper-list__row {% if index % 2 == 0 %}ecocart-shopper-list__row--reverse{% endif %}">
+                    <div class="ecocart-shopper-list__img-col">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(item.image.width / 2, item.image.height / 2) }}"
+                            data-src="{{ item.image.src|resizeDynamic(item.image.width / 2) }}"
+                            data-srcset="{{ item.image.src|resizeDynamic(item.image.width / 2) }} 1x, {{ item.image.src|resizeDynamic(item.image.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ item.image.alt|e }}"
+                        />
+                    </div>
+                    <div class="ecocart-shopper-list__info-col">
+                        <div class="ecocart-shopper-list__content">
+                            <h2>{{ item.title }}</h2>
+                            <p>{{ item.content }}</p>
+                        </div>
+                        <div class="ecocart-shopper-list__type ecocart-shopper-list__type--{{ item.type }}">{% if item.type == 'forest' %}Forest Protection{% elseif item.type == 'water' %}Water Purification{% else %}Wind Energy{% endif %}</div>
+                        <div class="ecocart-shopper-list__location">{{ item.location }}</div>
+                        <div class="ecocart-shopper-list__extra">
+                            <div class="ecocart-shopper-list__extra-btn">Show More</div>
+                            <div class="ecocart-shopper-list__extra-inner" style="display: none;">
+                                <div class="ecocart-shopper-list__extra-info">
+                                    <div class="ecocart-shopper-list__benefit">
+                                        <h4>Benefits</h4>
+                                        <ul>
+                                            {% for benefit in item.benefits %}
+                                                <li>{{ benefit.content }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ecocart-shopper-list__extra-image-grid">
+                                    <div class="ecocart-shopper-list__extra-image-card">
+                                        <h4>Verifications</h4>
+                                        <img
+                                            class="lazyload"
+                                            src="{{ placeholderImage(item.verification_image.width / 2, item.verification_image.height / 2) }}"
+                                            data-src="{{ item.verification_image.src|resizeDynamic(item.verification_image.width / 2) }}"
+                                            data-srcset="{{ item.verification_image.src|resizeDynamic(item.verification_image.width / 2) }} 1x, {{ item.verification_image.src|resizeDynamic(item.verification_image.width) }} 2x"
+                                            data-sizes="auto"
+                                            alt="{{ item.verification_image.alt|e }}"
+                                        />
+                                    </div>
+                                    <div class="ecocart-shopper-list__extra-image-card">
+                                        <h4>UN Goals</h4>
+                                        <img
+                                            class="lazyload"
+                                            src="{{ placeholderImage(item.un_goals_image.width / 2, item.un_goals_image.height / 2) }}"
+                                            data-src="{{ item.un_goals_image.src|resizeDynamic(item.un_goals_image.width / 2) }}"
+                                            data-srcset="{{ item.un_goals_image.src|resizeDynamic(item.un_goals_image.width / 2) }} 1x, {{ item.un_goals_image.src|resizeDynamic(item.un_goals_image.width) }} 2x"
+                                            data-sizes="auto"
+                                            alt="{{ item.un_goals_image.alt|e }}"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="ecocart-shopper-list__extra-gallery-grid">
+                                    {% for gallery in item.image_list %}
+                                        <div class="ecocart-shopper-list__extra-gallery-card">
+                                            <img
+                                                class="lazyload"
+                                                src="{{ placeholderImage(200, 200) }}"
+                                                data-src="{{ gallery.src|resizeDynamic(200, 200) }}"
+                                                data-srcset="{{ gallery.src|resizeDynamic(200, 200) }} 1x, {{ gallery.src|resizeDynamic(400, 400) }} 2x"
+                                                data-sizes="auto"
+                                                alt="{{ gallery.alt|e }}"
+                                            />
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-semiblack: 800;
+$font-weight-black: 900;
+
+$font-main-family: 'Sora';
+
+$color-white: #fff;
+$color-blue: #006cff;
+$color-black: #1a1a1b;
+$color-red: #f00;
+$color-green: #0f8354;
+$color-dark-green: #001d2c;
+$color-teal: #15e682;
+$color-gray: #727c81;
+$color-shade: #f1f1f1;
+
+$container-width: 1200px;
+
+$breakpoint-mobile-start-max: 999px;
+$breakpoint-mobile-start-min: 1000px;
+
+$dot-shadow-dark-green: '0 20px #{$color-dark-green}';
+$dot-shadow-teal: '0 20px #{$color-teal}';
+$dot-shadow-dark-green--mobile: '0 13px #{$color-dark-green}';
+$dot-shadow-teal--mobile: '0 13px #{$color-teal}';
+
+@for $i from 2 through 50 {
+  $y: 20 * $i;
+  $y--mobile: 13 * $i;
+  $dot-shadow-dark-green: '#{$dot-shadow-dark-green} , 0 #{$y}px #{$color-dark-green}';
+  $dot-shadow-teal: '#{$dot-shadow-teal} , 0 #{$y}px #{$color-teal}';
+  $dot-shadow-dark-green--mobile: '#{$dot-shadow-dark-green--mobile} , 0 #{$y--mobile}px #{$color-dark-green}';
+  $dot-shadow-teal--mobile: '#{$dot-shadow-teal--mobile} , 0 #{$y--mobile}px #{$color-teal}';
+}

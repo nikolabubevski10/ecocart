@@ -1,0 +1,91 @@
+.ecocart-homepage-hero {
+  overflow: hidden;
+  padding-top: 120px;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.ecocart-homepage-hero__content {
+  text-align: center;
+
+  h1 {
+    strong {
+      color: $color-green;
+    }
+  }
+
+  p {
+    margin-top: 8px;
+  }
+}
+
+.ecocart-homepage-hero__phone {
+  bottom: -100px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 300px;
+  z-index: 1;
+}
+
+.ecocart-homepage-hero__link {
+  margin-top: 26px;
+}
+
+#js-ecocart-homepage-hero__animation {
+  bottom: 0;
+  height: 447px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 2694px;
+}
+
+.ecocart-homepage-hero__animation-mobile-wrapper {
+  height: 318px;
+  overflow: hidden;
+  position: relative;
+}
+
+#js-ecocart-homepage-hero__animation-mobile {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 750px;
+}
+
+@media(max-width: 750px) {
+  #js-ecocart-homepage-hero__animation {
+    display: none;
+  }
+}
+
+@media(min-width: 751px) {
+  .ecocart-homepage-hero__animation-mobile-wrapper {
+    display: none;
+  }
+
+  .ecocart-homepage-hero {
+    height: 790px;
+  }
+
+  .ecocart-homepage-hero__phone {
+    bottom: -144px;
+    width: 434px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-homepage-hero {
+    height: 770px;
+    padding-top: 134px;
+  }
+
+  .ecocart-homepage-hero__link {
+    margin-top: 44px;
+  }
+}

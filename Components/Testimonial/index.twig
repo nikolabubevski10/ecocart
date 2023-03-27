@@ -1,0 +1,131 @@
+<section 
+    class="
+        ecocart-testimonial
+        {% if custom_padding_top.apply %}ecocart-testimonial__custom-padding-top{% endif %}
+        {% if custom_padding_bottom.apply %}ecocart-testimonial__custom-padding-bottom{% endif %}
+    "
+    {% if custom_padding_top.apply or custom_padding_bottom.apply %}
+        style="
+            {% if custom_padding_top.apply %}
+                --ecocart-testimonial-custom-padding-top-desktop: {{ custom_padding_top.desktop }}px;
+                --ecocart-testimonial-custom-padding-top-mobile: {{ custom_padding_top.mobile }}px;
+            {% endif %}
+            {% if custom_padding_bottom.apply %}
+                --ecocart-testimonial-custom-padding-bottom-desktop: {{ custom_padding_bottom.desktop }}px;
+                --ecocart-testimonial-custom-padding-bottom-mobile: {{ custom_padding_bottom.mobile }}px;
+            {% endif %}
+        "
+    {% endif %}
+>
+    {% if has_dot_image %}
+        <div class="ecocart-testimonial__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop"
+            />
+        </div>
+        <div class="ecocart-testimonial__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile"
+            />
+        </div>
+    {% endif %}
+    <div class="container">
+        <div class="dot-title">
+            <h3>{{ title }}</h3>
+        </div>
+        <div class="ecocart-testimonial__row">
+            {% for item in list %}
+                <div class="ecocart-testimonial__col">
+                    <div class="ecocart-testimonial__inner">
+                        <div class="ecocart-testimonial__logo">
+                            <img
+                                class="lazyload"
+                                data-src="{{ item.logo.src|resizeDynamic(110) }}"
+                                data-srcset="{{ item.logo.src|resizeDynamic(110) }} 1x, {{ item.logo.src|resizeDynamic(220) }} 2x"
+                                data-sizes="auto"
+                                alt="{{ item.logo.alt|e }}"
+                            />
+                        </div>
+                        <div class="ecocart-testimonial__content">
+                            <div class="ecocart-testimonial__content-txt">
+                                <p>{{ item.content }}</p>
+                            </div>
+                            <div class="ecocart-testimonial__user-row">
+                                <div class="ecocart-testimonial__user-avatar">
+                                    <img
+                                        class="lazyload"
+                                        src="{{ placeholderImage(56, 56) }}"
+                                        data-src="{{ item.avatar.src|resizeDynamic(56, 56) }}"
+                                        data-srcset="{{ item.avatar.src|resizeDynamic(56, 56) }} 1x, {{ item.avatar.src|resizeDynamic(112, 112) }} 2x"
+                                        data-sizes="auto"
+                                        alt="{{ item.avatar.alt|e }}"
+                                    />
+                                </div>
+                                <div class="ecocart-testimonial__user-info">
+                                    <div class="ecocart-testimonial__user-name">{{ item.name }}</div>
+                                    <div class="ecocart-testimonial__user-role">{{ item.role }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="ecocart-testimonial__slider" is="ecocart-testimonial-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for item in list %}
+                        <div class="swiper-slide">
+                            <div class="ecocart-testimonial__inner">
+                                <div class="ecocart-testimonial__logo">
+                                    <img
+                                        class="lazyload"
+                                        data-src="{{ item.logo.src|resizeDynamic(110) }}"
+                                        data-srcset="{{ item.logo.src|resizeDynamic(110) }} 1x, {{ item.logo.src|resizeDynamic(220) }} 2x"
+                                        data-sizes="auto"
+                                        alt="{{ item.logo.alt|e }}"
+                                    />
+                                </div>
+                                <div class="ecocart-testimonial__content">
+                                    <div class="ecocart-testimonial__content-txt">
+                                        <p>{{ item.content }}</p>
+                                    </div>
+                                    <div class="ecocart-testimonial__user-row">
+                                        <div class="ecocart-testimonial__user-avatar">
+                                            <img
+                                                class="lazyload"
+                                                src="{{ placeholderImage(56, 56) }}"
+                                                data-src="{{ item.avatar.src|resizeDynamic(56, 56) }}"
+                                                data-srcset="{{ item.avatar.src|resizeDynamic(56, 56) }} 1x, {{ item.avatar.src|resizeDynamic(112, 112) }} 2x"
+                                                data-sizes="auto"
+                                                alt="{{ item.avatar.alt|e }}"
+                                            />
+                                        </div>
+                                        <div class="ecocart-testimonial__user-info">
+                                            <div class="ecocart-testimonial__user-name">{{ item.name }}</div>
+                                            <div class="ecocart-testimonial__user-role">{{ item.role }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="ecocart-testimonial__slider-btn-row">
+                <div class="ecocart-testimonial__slider-btn ecocart-testimonial__slider-btn--prev">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M0.792892 7.29289C0.402369 7.68342 0.402369 8.31658 0.792892 8.70711L7.15685 15.0711C7.54738 15.4616 8.18054 15.4616 8.57107 15.0711C8.96159 14.6805 8.96159 14.0474 8.57107 13.6569L2.91421 8L8.57107 2.34315C8.96159 1.95262 8.96159 1.31946 8.57107 0.928932C8.18054 0.538407 7.54738 0.538407 7.15685 0.928932L0.792892 7.29289ZM21.75 7L1.5 7L1.5 9L21.75 9L21.75 7Z" fill="#0F8354"/></svg>
+                </div>
+                <div class="ecocart-testimonial__slider-btn ecocart-testimonial__slider-btn--next">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M21.2071 8.70711C21.5976 8.31658 21.5976 7.68342 21.2071 7.29289L14.8431 0.928932C14.4526 0.538407 13.8195 0.538407 13.4289 0.928932C13.0384 1.31946 13.0384 1.95262 13.4289 2.34315L19.0858 8L13.4289 13.6569C13.0384 14.0474 13.0384 14.6805 13.4289 15.0711C13.8195 15.4616 14.4526 15.4616 14.8431 15.0711L21.2071 8.70711ZM0.25 9L20.5 9L20.5 7L0.25 7L0.25 9Z" fill="#0F8354"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

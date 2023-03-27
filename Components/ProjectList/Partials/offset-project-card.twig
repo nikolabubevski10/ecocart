@@ -1,0 +1,22 @@
+{% set projectType = offsetProject.terms('project-type')[0] %}
+<div class="ecocart-project-list__card">
+    <div class="ecocart-project-list__card-image">
+        <img
+            class="lazyload"
+            src="{{ placeholderImage(400, 400) }}"
+            data-src="{{ offsetProject.thumbnail.src|resizeDynamic(400, 400) }}"
+            data-srcset="{{ offsetProject.thumbnail.src|resizeDynamic(400, 400) }} 1x, {{ offsetProject.thumbnail.src|resizeDynamic(800, 800) }} 2x"
+            data-sizes="auto"
+            alt="{{ offsetProject.thumbnail.alt|e }}"
+        />
+    </div>
+    <div class="ecocart-project-list__card-content">
+        <h3>{{ offsetProject.title }}</h3>
+        <p>{{ offsetProject.meta('about')|length > 85 ? offsetProject.meta('about')|slice(0, 85) ~ '...' : offsetProject.meta('about')  }}</p>
+        <div class="ecocart-project-list__card-location op-icon-location">{{ offsetProject.meta('location') }}</div>
+        <div class="ecocart-project-list__card-type op-icon-{{ projectType.slug }}">{{ projectType.name }}</div>
+        <div class="ecocart-project-list__card-link">
+            <a class="arrow-link arrow-link--blue" href="{{ offsetProject.link }}">Learn More</a>
+        </div>
+    </div>
+</div>

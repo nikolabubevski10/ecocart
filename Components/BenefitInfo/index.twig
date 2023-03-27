@@ -1,0 +1,98 @@
+<section class="ecocart-benefit-info">
+    <div class="container">
+        <div class="ecocart-benefit-info__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="Dot Desktop Image"
+            />
+        </div>
+        <div class="ecocart-benefit-info__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="Dot mobile Image"
+            />
+        </div>
+        <div class="sub-title">
+            <h3>{{ pre_title }}</h3>
+        </div>
+        <div class="ecocart-benefit-info__row">
+            <div class="ecocart-benefit-info__right-col">
+                <div class="ecocart-benefit-info__animation">
+                    <img
+                        class="lazyload ecocart-benefit-info__animation-img-1"
+                        src="{{ placeholderImage(image_1.width / 2, image_1.height / 2) }}"
+                        data-src="{{ image_1.src|resizeDynamic(image_1.width / 2) }}"
+                        data-srcset="{{ image_1.src|resizeDynamic(image_1.width / 2) }} 1x, {{ image_1.src|resizeDynamic(image_1.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image_1.alt|e }}"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    />
+                    <img
+                        class="lazyload ecocart-benefit-info__animation-img-2"
+                        src="{{ placeholderImage(image_2.width / 2, image_2.height / 2) }}"
+                        data-src="{{ image_2.src|resizeDynamic(image_2.width / 2) }}"
+                        data-srcset="{{ image_2.src|resizeDynamic(image_2.width / 2) }} 1x, {{ image_2.src|resizeDynamic(image_2.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image_2.alt|e }}"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="500"
+                    />
+                    <img
+                        class="lazyload ecocart-benefit-info__animation-img-3"
+                        src="{{ placeholderImage(image_3.width / 2, image_3.height / 2) }}"
+                        data-src="{{ image_3.src|resizeDynamic(image_3.width / 2) }}"
+                        data-srcset="{{ image_3.src|resizeDynamic(image_3.width / 2) }} 1x, {{ image_3.src|resizeDynamic(image_3.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image_3.alt|e }}"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="1000"
+                    />
+                    <img
+                        class="lazyload ecocart-benefit-info__animation-popup-1"
+                        src="{{ placeholderImage(popup_1.width / 2, popup_1.height / 2) }}"
+                        data-src="{{ popup_1.src|resizeDynamic(popup_1.width / 2) }}"
+                        data-srcset="{{ popup_1.src|resizeDynamic(popup_1.width / 2) }} 1x, {{ popup_1.src|resizeDynamic(popup_1.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ popup_1.alt|e }}"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="1500"
+                    />
+                    <img
+                        class="lazyload ecocart-benefit-info__animation-popup-2"
+                        src="{{ placeholderImage(popup_2.width / 2, popup_2.height / 2) }}"
+                        data-src="{{ popup_2.src|resizeDynamic(popup_2.width / 2) }}"
+                        data-srcset="{{ popup_2.src|resizeDynamic(popup_2.width / 2) }} 1x, {{ popup_2.src|resizeDynamic(popup_2.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ popup_2.alt|e }}"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="2000"
+                    />
+                    <img
+                        class="lazyload ecocart-benefit-info__animation-popup-3"
+                        src="{{ placeholderImage(popup_3.width / 2, popup_3.height / 2) }}"
+                        data-src="{{ popup_3.src|resizeDynamic(popup_3.width / 2) }}"
+                        data-srcset="{{ popup_3.src|resizeDynamic(popup_3.width / 2) }} 1x, {{ popup_3.src|resizeDynamic(popup_3.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ popup_3.alt|e }}"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="2500"
+                    />
+                </div>
+            </div>
+            <div class="ecocart-benefit-info__left-col">
+                <h2>{{ title }}</h2>
+                <p>{{ content }}</p>
+            </div>
+        </div>
+    </div>
+</section>

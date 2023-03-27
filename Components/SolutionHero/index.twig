@@ -1,0 +1,44 @@
+<section class="ecocart-solution-hero">
+    <div class="container">
+        <div class="ecocart-solution-hero__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop"
+            />
+        </div>
+        <div class="ecocart-solution-hero__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile"
+            />
+        </div>
+        <div class="ecocart-solution-hero__image">
+            {% if animation == 'none' %}
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                    data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                    data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image.alt|e }}"
+                />
+            {% else %}
+                <div id="js-ecocart-solution-hero__{{ animation }}-animation" class="ecocart-lottie" data-animation-src="{{ animation_list[animation] }}"></div>
+            {% endif %}
+        </div>
+        <div class="ecocart-solution-hero__content">
+            <div class="ecocart-solution-hero__content-inner">
+                <div class="vertical-dot"></div>
+                <h1>{{ title }}</h1>
+                <p>{{ content }}</p>
+            </div>
+            <div class="ecocart-solution-hero__link">
+                <a href="{{ link.url }}" class="btn btn--blue--dark">{{ link.title }}</a>
+            </div>
+        </div>
+    </div>
+</section>

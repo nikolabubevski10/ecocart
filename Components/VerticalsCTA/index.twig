@@ -1,0 +1,49 @@
+<section class="ecocart-verticals-cta ecocart-verticals-cta--{{ background_color }}">
+    <div class="ecocart-verticals-cta--top">
+        <div class="container">
+            <div class="ecocart-verticals-cta__img">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                    data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                    data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image.alt|e }}"
+                />
+            </div>
+        </div>
+    </div>
+    <div class="ecocart-verticals-cta--bottom">
+        <div class="container">
+            <div class="ecocart-verticals-cta__inner">
+                <div class="ecocart-verticals-cta__content">
+                    <h2>{{ title }}</h2>
+                    {% if content %}
+                        <p>{{ content }}</p>
+                    {% endif %}
+                </div>
+                <div class="{% if content %}ecocart-verticals-cta__link-small-top{% else %}ecocart-verticals-cta__link{% endif %}">
+                    <a class="btn btn--blue--{{ background_color }}" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+            {% if has_dot_background %}
+                <div class="ecocart-verticals-cta__dot-desktop">
+                    <img
+                        class="lazyload"
+                        data-src="{{ dot_desktop }}"
+                        data-sizes="auto"
+                        alt="dot desktop image"
+                    />
+                </div>
+            {% endif %}
+            <div class="ecocart-verticals-cta__dot-mobile">
+                <img
+                    class="lazyload"
+                    data-src="{{ dot_mobile }}"
+                    data-sizes="auto"
+                    alt="dot mobile image"
+                />
+            </div>
+        </div>
+    </div>
+</section>

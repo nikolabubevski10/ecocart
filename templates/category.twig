@@ -1,0 +1,7 @@
+{% extends 'templates/_document-white-header.twig' %}
+
+{% block content %}
+  {{ renderComponent('BlogHero', {'image': hero_image, 'title': hero_title, 'content': hero_content}) }}
+  {{ renderComponent('BlogList', {'current_cat_id': current_cat_id}) }}
+  {{ renderComponent('VerticalsCTA', {'image': cta_image, 'title': cta_title, 'link': cta_link, 'background_color': 'dark ', 'dot_mobile': cta_dot_mobile}) }}
+{% endblock %}

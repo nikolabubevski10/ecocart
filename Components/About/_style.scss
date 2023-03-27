@@ -1,0 +1,25 @@
+.ecocart-about {
+  padding: 84px 0 0;
+}
+
+.ecocart-about__content {
+  margin-top: 66px;
+
+  h2 {
+    margin-bottom: 26px;
+  }
+
+  p+p {
+    margin-top: 28px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-about__content {
+    margin-top: 84px;
+
+    h2 {
+      margin-bottom: 31px;
+    }
+  }
+}

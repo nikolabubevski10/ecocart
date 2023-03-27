@@ -1,0 +1,14 @@
+<section class="ecocart-post-content">
+    <div class="ecocart-post-content__container">
+        <div class="ecocart-post-content__meta-row">
+            <div class="ecocart-post-content__meta-text">{{ post.date|date('M jS Y') }}</div>
+            <div class="ecocart-post-content__meta-icon">
+                <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.14583 19.8925L9.10694 11.7791L20.29 3.47019L6.87518 10.3568L0 5.97752L25.6725 0L19.658 20L11.2317 13.6461L9.14583 19.8925Z" fill="#0F8354"/><path d="M10.6188 19.2179L11.669 15.0537L13.6479 17.1065L10.6188 19.2179Z" fill="#0F8354"/></svg>
+            </div>
+            <div class="ecocart-post-content__meta-text">{{ post.meta('reading_time') }} Minute read</div>
+        </div>
+        <div class="ecocart-post-content__txt">
+            {{ post.content }}
+        </div>
+    </div>
+</section>

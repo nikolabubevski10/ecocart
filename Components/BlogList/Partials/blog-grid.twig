@@ -1,0 +1,29 @@
+{% for index, blog in blog_list %}
+    {% if index == 0 %}
+        <div class="ecocart-blog-list__grid-item ecocart-blog-list__grid-item--wide">
+            <a href="{{ blog.link }}">
+                <div class="ecocart-blog-list__card ecocart-blog-list__card--wide">
+                    <div class="ecocart-blog-list__card-img">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(560, 290) }}"
+                            data-src="{{ blog.thumbnail.src|resizeDynamic(560, 290) }}"
+                            data-srcset="{{ blog.thumbnail.src|resizeDynamic(560, 290) }} 1x, {{ blog.thumbnail.src|resizeDynamic(1120, 580) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ blog.thumbnail.alt|e }}"
+                        />
+                    </div>
+                    <div class="ecocart-blog-list__card-content">
+                        <div class="ecocart-blog-list__card-cat">
+                            <span>{{ blog.category }}</span>
+                        </div>
+                        <h4>{{ blog.title }}</h4>
+                        <p>{{ blog.post_excerpt }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% else %}
+        {% include 'Partials/blog-card.twig' ignore missing with {blog: blog} only %}
+    {% endif %}
+{% endfor %}

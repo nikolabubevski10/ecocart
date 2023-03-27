@@ -1,0 +1,47 @@
+.ecocart-solution__content {
+  margin-top: 30px;
+
+  p+p {
+    margin-top: 28px;
+  }
+}
+
+.ecocart-solution__grid {
+  margin-top: 68px;
+}
+
+.ecocart-solution__title {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.75;
+  margin-top: 7px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-solution__card+.ecocart-solution__card {
+    margin-top: 45px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-solution {
+    padding: 10px 0;
+  }
+
+  .ecocart-solution__grid {
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 78px;
+  }
+
+  .ecocart-solution__img {
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  .ecocart-solution__content {
+    margin-top: 84px;
+  }
+}

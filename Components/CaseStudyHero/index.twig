@@ -1,0 +1,49 @@
+<section class="ecocart-case-study-hero">
+    <div class="container">
+        <div class="ecocart-case-study-hero__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop"
+            />
+        </div>
+        <div class="ecocart-case-study-hero__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile"
+            />
+        </div>
+        <div class="ecocart-case-study-hero__row">
+            <div class="ecocart-case-study-hero__right-col">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                    data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                    data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image.alt|e }}"
+                />
+            </div>
+            <div class="ecocart-case-study-hero__left-col">
+                <div class="ecocart-case-study-hero__logo">
+                    <img
+                        class="lazyload"
+                        data-src="{{ logo.src }}"
+                        data-sizes="auto"
+                        alt="{{ logo.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-case-study-hero__content">
+                    <h1><span class="vertical-dot"></span>{{ title }}</h1>
+                    <p>{{ content }}</p>
+                </div>
+                <div class="ecocart-case-study-hero__link">
+                    <a class="btn btn--blue--dark" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

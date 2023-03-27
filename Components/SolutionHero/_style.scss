@@ -1,0 +1,130 @@
+.ecocart-solution-hero__dot-desktop {
+  left: 330px;
+  position: absolute;
+  top: 100px;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-solution-hero__dot-mobile {
+  position: absolute;
+  position: absolute;
+  right: -20px;
+  top: 20px;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-solution-hero {
+  background-color: $color-dark-green;
+  color: $color-white;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-solution-hero__content-inner {
+  position: relative;
+
+  p {
+    margin-top: 17px;
+  }
+}
+
+.ecocart-solution-hero__link {
+  margin-top: 27px;
+}
+
+#js-ecocart-solution-hero__apparel-animation {
+  max-width: 434px;
+}
+
+#js-ecocart-solution-hero__cosmetics-animation {
+  max-width: 434px;
+}
+
+#js-ecocart-solution-hero__homegoods-animation {
+  max-width: 434px;
+}
+
+#js-ecocart-solution-hero__consumer-animation {
+  max-width: 434px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-solution-hero__dot-desktop {
+    display: none;
+  }
+
+  .ecocart-solution-hero {
+    padding: 94px 0 53px;
+  }
+
+  .ecocart-solution-hero__content {
+    margin-top: 20px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-solution-hero {
+    height: 770px;
+
+    .container {
+      align-items: center;
+      display: flex;
+      flex-direction: row-reverse;
+      height: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  .ecocart-solution-hero__content {
+    max-width: 540px;
+    padding-right: 50px;
+  }
+
+  .ecocart-solution-hero__content-inner {
+    p {
+      margin-top: 27px;
+    }
+  }
+
+  .ecocart-solution-hero__image {
+    padding-right: 50px;
+    padding-top: 20px;
+  }
+
+  .ecocart-solution-hero__link {
+    margin-top: 32px;
+  }
+
+  .ecocart-solution-hero__dot-mobile {
+    display: none;
+  }
+
+  #js-ecocart-solution-hero__apparel-animation {
+    height: 564px;
+    width: 434px;
+  }
+
+  #js-ecocart-solution-hero__cosmetics-animation {
+    height: 564px;
+    width: 434px;
+  }
+
+  #js-ecocart-solution-hero__homegoods-animation {
+    height: 564px;
+    width: 434px;
+  }
+
+  #js-ecocart-solution-hero__consumer-animation {
+    height: 564px;
+    width: 434px;
+  }
+}

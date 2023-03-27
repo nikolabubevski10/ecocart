@@ -1,0 +1,150 @@
+.ecocart-icon-list {
+  overflow: hidden;
+  padding: 72px 0 85px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-icon-list__dot-desktop {
+  left: -150px;
+  position: absolute;
+  top: -45px;
+  z-index: 1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-icon-list__card {
+  text-align: center;
+}
+
+.ecocart-icon-list__card-txt {
+  margin-top: 29px;
+}
+
+#js-ecocart-icon-list__card-careers-animation-0 {
+  height: 160px;
+  margin: -26px auto -30px;
+  width: 177px;
+}
+
+#js-ecocart-icon-list__card-careers-animation-1 {
+  height: 160px;
+  margin: -26px auto -30px;
+  width: 177px;
+}
+
+#js-ecocart-icon-list__card-careers-animation-2 {
+  height: 160px;
+  margin: -26px auto -30px;
+  width: 177px;
+}
+
+#js-ecocart-icon-list__card-careers-animation-3 {
+  height: 160px;
+  margin: -26px auto -30px;
+  width: 177px;
+}
+
+#js-ecocart-icon-list__card-careers-animation-4 {
+  height: 160px;
+  margin: -26px auto -30px;
+  width: 177px;
+}
+
+#js-ecocart-icon-list__card-careers-animation-5 {
+  height: 160px;
+  margin: -26px auto -30px;
+  width: 177px;
+}
+
+#js-ecocart-icon-list__card-careers-animation-6 {
+  height: 160px;
+  margin: -26px auto -30px;
+  width: 177px;
+}
+
+#js-ecocart-icon-list__card-careers-animation-7 {
+  height: 160px;
+  margin: -26px auto -30px;
+  width: 177px;
+}
+
+.ecocart-icon-list__dot-mobile-top {
+  left: -120px;
+  position: absolute;
+  top: 90px;
+  z-index: 1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-icon-list__dot-mobile-bottom {
+  bottom: -25px;
+  position: absolute;
+  right: -16px;
+  z-index: 1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-icon-list__grid {
+  position: relative;
+  z-index: 2;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-icon-list__dot-desktop {
+    display: none;
+  }
+}
+
+@media(max-width: 499px) {
+  .ecocart-icon-list__card+.ecocart-icon-list__card {
+    margin-top: 52px;
+  }
+}
+
+@media(min-width: 500px) {
+  .ecocart-icon-list__grid {
+    column-gap: 50px;
+    display: grid;
+    grid-template-columns: 230px 230px;
+    justify-content: center;
+    row-gap: 42px;
+  }
+}
+
+@media(min-width: 800px) {
+  .ecocart-icon-list__grid {
+    grid-template-columns: 230px 230px 230px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-icon-list {
+    padding: 120px 0 110px;
+  }
+
+  .ecocart-icon-list__dot-mobile-top {
+    display: none;
+  }
+  
+  .ecocart-icon-list__dot-mobile-bottom {
+    display: none;
+  }
+}
+
+@media(min-width: 1200px) {
+  .ecocart-icon-list__grid {
+    grid-template-columns: 230px 230px 230px 230px;
+  }
+}

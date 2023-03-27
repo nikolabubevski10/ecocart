@@ -1,0 +1,107 @@
+<section 
+    class="
+        ecocart-case-study-card
+        {% if custom_padding_top.apply %}ecocart-case-study-card__custom-padding-top{% endif %}
+        {% if custom_padding_bottom.apply %}ecocart-case-study-card__custom-padding-bottom{% endif %}
+    "
+    {% if custom_padding_top.apply or custom_padding_bottom.apply %}
+        style="
+            {% if custom_padding_top.apply %}
+                --ecocart-case-study-card-custom-padding-top-desktop: {{ custom_padding_top.desktop }}px;
+                --ecocart-case-study-card-custom-padding-top-mobile: {{ custom_padding_top.mobile }}px;
+            {% endif %}
+            {% if custom_padding_bottom.apply %}
+                --ecocart-case-study-card-custom-padding-bottom-desktop: {{ custom_padding_bottom.desktop }}px;
+                --ecocart-case-study-card-custom-padding-bottom-mobile: {{ custom_padding_bottom.mobile }}px;
+            {% endif %}
+        "
+    {% endif %}
+>
+    <div class="container">
+        {% if has_dot_background %}
+            <div class="ecocart-case-study-card__dot-desktop">
+                <img
+                    class="lazyload"
+                    data-src="{{ dot_desktop }}"
+                    data-sizes="auto"
+                    alt="dot-desktop"
+                />
+            </div>
+            <div class="ecocart-case-study-card__dot-mobile">
+                <img
+                    class="lazyload"
+                    data-src="{{ dot_mobile }}"
+                    data-sizes="auto"
+                    alt="dot-mobile"
+                />
+            </div>
+        {% endif %}
+        <div class="dot-title">
+            <h3>{{ pre_title }}</h3>
+        </div>
+        <div class="ecocart-case-study-card__row">
+            <div class="ecocart-case-study-card__img">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(avatar.width / 2, avatar.height / 2) }}"
+                    data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                    data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image.alt|e }}"
+                />
+            </div>
+            <div class="ecocart-case-study-card__content">
+                <div class="ecocart-case-study-card__logo">
+                    <img
+                        class="lazyload"
+                        data-src="{{ logo.src }}"
+                        data-sizes="auto"
+                        alt="{{ logo.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-case-study-card__info">
+                    <h2>{{ title }}</h2>
+                    {% if kpi_lable_1 or kpi_lable_2 %}
+                        <div class="ecocart-case-study-card__kpi-row">
+                            {% if kpi_lable_1 %}
+                                <div class="ecocart-case-study-card__kpi-item">{{ kpi_lable_1 }}</div>
+                            {% endif %}
+                            {% if kpi_lable_2 %}
+                                <div class="ecocart-case-study-card__kpi-item">{{ kpi_lable_2 }}</div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                    <p>{{ content }}</p>
+                </div>
+                <div class="ecocart-case-study-card__user-row">
+                    <div class="ecocart-case-study-card__user-left-col">
+                        <div class="ecocart-case-study-card__user-avatar-col">
+                            <img
+                                class="lazyload"
+                                src="{{ placeholderImage(avatar.width / 2, avatar.height / 2) }}"
+                                data-src="{{ avatar.src|resizeDynamic(avatar.width / 2) }}"
+                                data-srcset="{{ avatar.src|resizeDynamic(avatar.width / 2) }} 1x, {{ avatar.src|resizeDynamic(avatar.width) }} 2x"
+                                data-sizes="auto"
+                                alt="{{ avatar.alt|e }}"
+                            />
+                        </div>
+                        <div class="ecocart-case-study-card__user-info-col">
+                            <div class="ecocart-case-study-card__user-name">{{ name }}</div>
+                            <div class="ecocart-case-study-card__user-role">{{ role }}</div>
+                        </div>
+                    </div>
+                    {% if link_position == 'right' %}
+                        <div class="ecocart-case-study-card__link-right">
+                            <a class="btn btn--blue--dark" href="{{ link.url }}">{{ link.title }}</a>
+                        </div>
+                    {% endif %}
+                </div>
+                {% if link_position == 'bottom' %}
+                    <div class="ecocart-case-study-card__link">
+                        <a class="btn btn--dark-green" href="{{ link.url }}">{{ link.title }}</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

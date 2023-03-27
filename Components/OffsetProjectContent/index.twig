@@ -1,0 +1,139 @@
+<section class="ecocart-op-content">
+    <div class="ecocart-op-content__dot-desktop">
+        <img
+            class="lazyload"
+            data-src="{{ dot_desktop }}"
+            data-sizes="auto"
+            alt="dot desktop"
+        />
+    </div>
+    <div class="container">
+        <div class="ecocart-op-content__meta">
+            <div class="ecocart-op-content__meta-col">
+                <div class="ecocart-op-content__meta-location op-icon-location">{{ post.meta('location') }}</div>
+            </div>
+            <div class="ecocart-op-content__meta-col">
+                <div class="ecocart-op-content__meta-type op-icon-{{ project_type.slug }}">{{ project_type.name }}</div>
+            </div>
+        </div>
+        <div class="ecocart-op-content__grid">
+            <div class="ecocart-op-content__content">
+                {% if post.meta('about') %}
+                    <h2>ABOUT</h2>
+                    <p>{{ post.meta('about') }}</p>
+                {% endif %}
+                <div id="js-ecocart-single-op-map" class="ecocart-single-op-map" data-lat="{{ lat }}" data-lng="{{ lng }}"></div>
+                {% if post.meta('impact') %}
+                    <h2>IMPACT</h2>
+                    <div class="ecocart-impact-info__row">
+                        {% for item in post.meta('impact') %}
+                            <div class="ecocart-impact-info__col">
+                                <div class="ecocart-impact-info__img">
+                                    {% if impact_icons[item.image] == 'none' %}
+                                        {{ item.image }} icon is not added. please add this icon.
+                                    {% else %}
+                                        <img
+                                            class="lazyload"
+                                            data-src="{{ impact_icons[item.image] }}"
+                                            data-sizes="auto"
+                                            alt="{{ item.image|e }}"
+                                        />
+                                    {% endif %}
+                                </div>
+                                <div class="ecocart-impact-info__val h1">{{ item.value }}</div>
+                                <div class="ecocart-impact-info__title">{{ item.text }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% if post.meta('benefits') %}
+                    <h2>BENEFITS</h2>
+                    <ul>
+                        {% for item in post.meta('benefits') %}
+                            <li>{{ item.content }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {% if post.meta('photos') %}
+                    <h2>PHOTOS</h2>
+                    <div class="ecocart-photo-list" is="ecocart-photo-list-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                {% for image in post.meta('photos') %}
+                                    <div class="swiper-slide">
+                                        <img
+                                            class="lazyload"
+                                            src="{{ placeholderImage(300, 300) }}"
+                                            data-src="{{ image.src|resizeDynamic(300, 300) }}"
+                                            data-srcset="{{ image.src|resizeDynamic(300, 300) }} 1x, {{ image.src|resizeDynamic(600, 600) }} 2x"
+                                            data-sizes="auto"
+                                            alt="{{ image.alt|e }}"
+                                        />
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="ecocart-photo-list__slider-nav-row">
+                            <div class="ecocart-photo-list__slider-nav-item ecocart-photo-list__slider-nav-item--prev">
+                                <svg width="36" height="24" viewBox="0 0 36 24" fill="none"><path d="M34 13.5C34.8284 13.5 35.5 12.8284 35.5 12C35.5 11.1716 34.8284 10.5 34 10.5L34 13.5ZM0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.807609 10.4853 1.3934L0.939339 10.9393ZM34 10.5L2 10.5L2 13.5L34 13.5L34 10.5Z" fill="#FFFFFE"/></svg>
+                            </div>
+                            <div class="ecocart-photo-list__slider-nav-item ecocart-photo-list__slider-nav-item--next">
+                                <svg width="36" height="24" viewBox="0 0 36 24" fill="none"><path d="M34 13.5C34.8284 13.5 35.5 12.8284 35.5 12C35.5 11.1716 34.8284 10.5 34 10.5L34 13.5ZM0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.807609 10.4853 1.3934L0.939339 10.9393ZM34 10.5L2 10.5L2 13.5L34 13.5L34 10.5Z" fill="#FFFFFE"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if verifications %}
+                    <h2>VERIFICATIONS</h2>
+                    {% for item in verifications %}
+                        <div class="ecocart-content-logo__row">
+                            <div class="ecocart-content-logo__img">
+                                <img
+                                    class="lazyload"
+                                    src="{{ placeholderImage(item.image.width, item.image.height) }}"
+                                    data-src="{{ item.image.src|resizeDynamic(item.image.width) }}"
+                                    data-sizes="auto"
+                                    alt="{{ item.image.alt|e }}"
+                                />
+                            </div>
+                            <div class="ecocart-content-logo__content">
+                                {{ item.description|apply_filters('the_content') }} 
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="ecocart-op-content__map">
+                <div class="ecocart-single-op-side-map-wrapper">
+                    <div id="js-ecocart-single-op-side-map" data-lat="{{ lat }}" data-lng="{{ lng }}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ecocart-goal">
+    <div class="container">
+        <div class="sub-title">
+            <h3>{{ goal_title }}</h3>
+        </div>
+        <div class="ecocart-goal__card-wrapper">
+            {% for goal in goals %}
+                <div class="ecocart-goal__card">
+                    <div class="ecocart-goal__card-image">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(135, 135) }}"
+                            data-src="{{ goal.image.src|resizeDynamic(135, 135) }}"
+                            data-srcset="{{ goal.image.src|resizeDynamic(135, 135) }} 1x, {{ goal.image.src|resizeDynamic(270, 270) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ goal.image.alt|e }}"
+                        />
+                    </div>
+                    <div class="ecocart-goal__card-content">
+                        <p>{{ goal.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

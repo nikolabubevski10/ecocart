@@ -1,0 +1,64 @@
+<section class="ecocart-press">
+    <div class="container">
+        <div class="dot-title">
+            <h3>{{ pre_title }}</h3>
+        </div>
+        <div class="ecocart-press__feature-row">
+            <div class="ecocart-press__feature-right-col">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(top_image.width / 2, top_image.height / 2) }}"
+                    data-src="{{ top_image.src|resizeDynamic(top_image.width / 2) }}"
+                    data-srcset="{{ top_image.src|resizeDynamic(top_image.width / 2) }} 1x, {{ top_image.src|resizeDynamic(top_image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ top_image.alt|e }}"
+                />
+            </div>
+            <div class="ecocart-press__feature-left-col">
+                <div class="ecocart-press__feature-logo">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(top_logo.width / 2, top_logo.height / 2) }}"
+                        data-src="{{ top_logo.src|resizeDynamic(top_logo.width / 2) }}"
+                        data-srcset="{{ top_logo.src|resizeDynamic(top_logo.width / 2) }} 1x, {{ top_logo.src|resizeDynamic(top_logo.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ top_logo.alt|e }}"
+                    />
+                </div>
+                <h2>{{ top_title }}</h2>
+                <h3>{{ top_authour }}</h3>
+                <div class="ecocart-press__feature-link">
+                    <a class="btn" href="{{ top_link.url }}">{{ top_link.title }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="ecocart-press__slider"  is="ecocart-press-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for item in post_list %}
+                        <div class="swiper-slide">
+                            <div class="ecocart-press__slider-card">
+                                <div class="ecocart-press__slider-card-cat">{{ item.post.category }}</div>
+                                <div class="ecocart-press__slider-card-content">
+                                    <h3>{{ item.post.title }}</h3>
+                                    <p>{{ item.post.post_excerpt }}</p>
+                                </div>
+                                <div class="ecocart-press__slider-card-link">
+                                    <a class="arrow-link arrow-link--black" href="{{ item.post.link }}">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="ecocart-press__slider-nav-row">
+                <div class="ecocart-press__slider-nav-item ecocart-press__slider-nav-item--prev">
+                    <svg width="36" height="24" viewBox="0 0 36 24" fill="none"><path d="M34 13.5C34.8284 13.5 35.5 12.8284 35.5 12C35.5 11.1716 34.8284 10.5 34 10.5L34 13.5ZM0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.807609 10.4853 1.3934L0.939339 10.9393ZM34 10.5L2 10.5L2 13.5L34 13.5L34 10.5Z" fill="#FFFFFE"/></svg>
+                </div>
+                <div class="ecocart-press__slider-nav-item ecocart-press__slider-nav-item--next">
+                    <svg width="36" height="24" viewBox="0 0 36 24" fill="none"><path d="M34 13.5C34.8284 13.5 35.5 12.8284 35.5 12C35.5 11.1716 34.8284 10.5 34 10.5L34 13.5ZM0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.80761 11.0711 0.807609 10.4853 1.3934L0.939339 10.9393ZM34 10.5L2 10.5L2 13.5L34 13.5L34 10.5Z" fill="#FFFFFE"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

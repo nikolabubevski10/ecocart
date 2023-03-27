@@ -1,0 +1,8 @@
+{% extends 'templates/_document-white-header.twig' %}
+
+{% block content %}
+  {{ renderComponent('PostHero', { post: post, 'archive_link': archive_link }) }}
+  {{ renderComponent('PostContent', { post: post }) }}
+  {{ renderComponent('OtherResource', { excerpt_post: post }) }}
+  {{ renderComponent('VerticalsCTA', {'image': cta_image, 'title': cta_title, 'link': cta_link, 'background_color': 'dark ', 'dot_mobile': cta_dot_mobile}) }}
+{% endblock %}

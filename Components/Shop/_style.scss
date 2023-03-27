@@ -1,0 +1,257 @@
+.ecocart-shop {
+  overflow: hidden;
+  padding: 70px 0 0;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-shop__dot {
+  left: -140px;
+  position: absolute;
+  top: -83px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-shop__dot-mobile {
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: -1;
+
+  img {
+    left: 50%;
+    max-width: none;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
+
+.ecocart-shop__left-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.ecocart-shop__left-item--active {
+  .ecocart-shop__left-item-circle {
+    background-color: $color-teal;
+    border-color: $color-teal;
+    color: $color-white;
+  }
+
+  .ecocart-shop__left-item-circle--has-dot {
+    &::after {
+      background-color: $color-teal;
+      box-shadow: unquote($dot-shadow-teal--mobile);
+      opacity: 0.4;
+    }
+  }
+
+  .ecocart-shop__left-item-info {
+    color: $color-black;
+  }
+}
+
+.ecocart-shop__left-item-circle {
+  background-color: transparent;
+  border: 1px solid $color-dark-green;
+  border-radius: 50%;
+  color: #8c8c8d;
+  font-size: 24px;
+  font-weight: $font-weight-bold;
+  height: 66px;
+  line-height: 1.26;
+  padding-top: 18px;
+  text-align: center;
+  transition: border-color 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
+  width: 66px;
+}
+
+.ecocart-shop__left-item-info {
+  color: rgba($color-black, 0.5);
+  padding-left: 25px;
+  width: calc(100% - 66px);
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.ecocart-shop__left-title {
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  line-height: 1.575;
+}
+
+.ecocart-shop__left-item-wrapper {
+  overflow: hidden;
+  padding-bottom: 60px;
+  
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.ecocart-shop__left-col {
+  h2 {
+    margin-bottom: 60px;
+  }
+}
+
+.ecocart-shop__right-col {
+  video {
+    margin-left: -55px;
+    width: 400px;
+  }
+}
+
+.ecocart-shop__left-item-circle--has-dot {
+  position: relative;
+  
+  &::after {
+    background-color: $color-dark-green;
+    border-radius: 50%;
+    bottom: -13px;
+    box-shadow: unquote($dot-shadow-dark-green--mobile);
+    content: '';
+    height: 6px;
+    left: 28px;
+    opacity: 0.1;
+    position: absolute;
+    width: 6px;
+  }
+}
+
+.ecocart-shop__row {
+  margin-top: 34px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-shop__dot {
+    display: none;
+  }
+
+  .ecocart-shop__left-col {
+    margin-top: 50px;
+  }
+}
+
+@media(min-width: 550px) {
+  .ecocart-shop__right-col {
+    video {
+      margin-left: -80px;
+      width: 550px;
+    }
+  }
+}
+
+@media(min-width: 750px) {
+  .ecocart-shop__right-col {
+    video {
+      margin-left: -110px;
+      width: 750px;
+    }
+  }
+}
+
+@media(min-width: 950px) {
+  .ecocart-shop__right-col {
+    video {
+      margin-left: -137px;
+      width: 950px;
+    }
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-shop {
+    padding: 108px 0 50px;
+  }
+
+  .ecocart-shop__row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 90px;
+  }
+
+  .ecocart-shop__left-col {
+    padding-right: 50px;
+    position: relative;
+    width: calc(100% - 540px);
+    z-index: 2;
+  }
+
+  .ecocart-shop__right-col {
+    position: relative;
+    width: 540px;
+    z-index: 1;
+
+    video {
+      margin-left: -110px;
+      width: 760px;
+    }
+  }
+
+  .ecocart-shop__dot-mobile {
+    display: none;
+  }
+}
+
+@media(min-width: 1150px) {
+  .ecocart-shop__left-item-circle {
+    font-size: 24px;
+    height: 72px;
+    padding-top: 20px;
+    width: 72px;
+  }
+
+  .ecocart-shop__left-item-circle--has-dot {
+    &::after {
+      bottom: -26px;
+      box-shadow: unquote($dot-shadow-dark-green);
+      height: 9px;
+      left: 31px;
+      width: 9px;
+    }
+  }
+
+  .ecocart-shop__left-item--active {
+    .ecocart-shop__left-item-circle--has-dot {
+      &::after {
+        box-shadow: unquote($dot-shadow-teal);
+      }
+    }
+  }
+
+  .ecocart-shop__left-item-info {
+    padding-left: 35px;
+    width: calc(100% - 72px);
+
+    p {
+      margin-top: -4px;
+    }
+  }
+
+  .ecocart-shop__left-title {
+    font-size: 36px;
+    line-height: 1.26;
+  }
+
+  .ecocart-shop__left-item-wrapper {
+    padding-bottom: 80px;
+  }
+
+  .ecocart-shop__left-col {
+    padding-right: 0;
+    width: 454px;
+  }
+}

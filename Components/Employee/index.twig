@@ -1,0 +1,85 @@
+<section class="ecocart-employee">
+    <div class="container">
+        <div class="ecocart-employee__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop"
+            />
+        </div>
+        <div class="ecocart-employee__row">
+            <div class="ecocart-employee__left-col">
+                <div class="dot-title">
+                    <h3>{{ left_title }}</h3>
+                </div>
+                <div class="ecocart-employee__left-logo-row">
+                    {% for logo in left_logo_list %}
+                        <div class="ecocart-employee__left-logo-col">
+                            <div class="ecocart-employee__logo">
+                                {% if logo.image.width %}
+                                    <img
+                                        class="lazyload"
+                                        src="{{ placeholderImage(logo.image.width / 2, logo.image.height / 2) }}"
+                                        data-src="{{ logo.image.src|resizeDynamic(logo.image.width / 2) }}"
+                                        data-srcset="{{ logo.image.src|resizeDynamic(logo.image.width / 2) }} 1x, {{ logo.image.src|resizeDynamic(logo.image.width) }} 2x"
+                                        data-sizes="auto"
+                                        alt="{{ logo.image.alt|e }}"
+                                    />
+                                {% else %}
+                                    <img
+                                        class="lazyload"
+                                        data-src="{{ logo.image.src }}"
+                                        data-sizes="auto"
+                                        alt="{{ logo.image.alt|e }}"
+                                    />
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="ecocart-employee__right-col">
+                <div class="ecocart-employee__dot-mobile">
+                    <img
+                        class="lazyload"
+                        data-src="{{ dot_mobile }}"
+                        data-sizes="auto"
+                        alt="dot mobile"
+                    />
+                </div>
+                <div class="dot-title dot-title--no-dot ecocart-employee__right--desktop">
+                    <h3>{{ right_title }}</h3>
+                </div>
+                <div class="dot-title ecocart-employee__right--mobile">
+                    <h3>{{ right_title }}</h3>
+                </div>
+                <div class="ecocart-employee__right-logo-row">
+                    {% for logo in right_logo_list %}
+                        <div class="ecocart-employee__right-logo-col">
+                            <div class="ecocart-employee__logo">
+                                {% if logo.image.width %}
+                                    <img
+                                        class="lazyload"
+                                        src="{{ placeholderImage(logo.image.width / 2, logo.image.height / 2) }}"
+                                        data-src="{{ logo.image.src|resizeDynamic(logo.image.width / 2) }}"
+                                        data-srcset="{{ logo.image.src|resizeDynamic(logo.image.width / 2) }} 1x, {{ logo.image.src|resizeDynamic(logo.image.width) }} 2x"
+                                        data-sizes="auto"
+                                        alt="{{ logo.image.alt|e }}"
+                                    />
+                                {% else %}
+                                    <img
+                                        class="lazyload"
+                                        data-src="{{ logo.image.src }}"
+                                        data-sizes="auto"
+                                        alt="{{ logo.image.alt|e }}"
+                                    />
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

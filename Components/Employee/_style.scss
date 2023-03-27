@@ -1,0 +1,148 @@
+.ecocart-employee {
+  background-color: $color-dark-green;
+  color: $color-white;
+  overflow: hidden;
+  padding: 64px 0 87px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-employee__dot-desktop {
+  bottom: -90px;
+  position: absolute;
+  right: -170px;
+}
+
+.ecocart-employee__left-logo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+}
+
+.ecocart-employee__right-logo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+}
+
+.ecocart-employee__left-logo-col {
+  .ecocart-employee__logo {
+    justify-content: center;
+  }
+}
+
+.ecocart-employee__logo {
+  align-items: center;
+  display: flex;
+}
+
+.ecocart-employee__right-col {
+  position: relative;
+}
+
+.ecocart-employee__dot-mobile {
+  position: absolute;
+  right: -40px;
+  top: 0;
+
+  img {
+    max-width: none;
+  }
+}
+
+@media(max-width: 1099px) {
+  .ecocart-employee__right-col {
+    margin-top: 77px;
+  }
+
+  .ecocart-employee__right-logo-col {
+    .ecocart-employee__logo {
+      justify-content: center;
+    }
+  }
+
+  .ecocart-employee__right--desktop {
+    display: none;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-employee__dot-desktop {
+    display: none;
+  }
+
+  .ecocart-employee__left-logo-row {
+    align-items: center;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+  
+  .ecocart-employee__right-logo-row {
+    align-items: center;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+}
+
+@media(min-width: 800px) {
+  .ecocart-employee__left-logo-row {
+    grid-template-columns: auto auto auto;
+  }
+
+  .ecocart-employee__right-logo-row {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-employee {
+    padding: 133px 0;
+  }
+
+  .ecocart-employee__left-logo-row {
+    grid-template-columns: auto auto auto auto;
+    margin-top: 90px;
+  }
+
+  .ecocart-employee__right-logo-row {
+    grid-template-columns: auto auto auto auto;
+    margin-top: 90px;
+  }
+
+  .ecocart-employee__logo {
+    height: 100px;
+  }
+
+  .ecocart-employee__dot-mobile {
+    display: none;
+  }
+}
+
+@media(min-width: 1100px) {
+  .ecocart-employee__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ecocart-employee__left-col {
+    width: 600px;
+  }
+
+  .ecocart-employee__right-col {
+    width: 350px;
+  }
+
+  .ecocart-employee__left-logo-row {
+    grid-template-columns: auto auto auto;
+  }
+
+  .ecocart-employee__right-logo-row {
+    grid-template-columns: auto auto;
+  }
+
+  .ecocart-employee__right--mobile {
+    display: none;
+  }
+}

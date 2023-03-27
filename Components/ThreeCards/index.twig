@@ -1,0 +1,25 @@
+<section class="ecocart-three-cards">
+    <div class="container">
+        <div class="ecocart-three-cards__grid">
+            {% for index, card in card_list %}
+                <div class="ecocart-three-cards__card">
+                    <div class="ecocart-three-cards__card-img">
+                        {% if animation == 'none' %}
+                            <img
+                                class="lazyload"
+                                data-src="{{ card.image.src }}"
+                                data-sizes="auto"
+                                alt="{{ card.image.alt|e }}"
+                            />
+                        {% else %}
+                            <div id="js-ecocart-three-cards__{{ animation }}-animation-{{ index }}" class="ecocart-lottie" data-animation-src="{{ animation_list[index] }}"></div>
+                        {% endif %}
+                    </div>
+                    <div class="ecocart-three-cards__card-value">{{ card.value }}</div>
+                    <div class="ecocart-three-cards__card-content">
+                        <h3>{{ card.title }}</h3>
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,27 @@
+<section class="ecocart-homepage-hero">
+    <div class="container">
+        <div class="ecocart-homepage-hero__content">
+            <h1>{{ title }}</h1>
+            <p>{{ content }}</p>
+            <div class="ecocart-homepage-hero__link">
+                <a href="{{ link.url }}" class="btn btn--blue">{{ link.title }}</a>
+            </div>
+        </div>
+    </div>
+    <div id="js-ecocart-homepage-hero__animation"></div>
+    <div class="ecocart-homepage-hero__animation-mobile-wrapper">
+        <div id="js-ecocart-homepage-hero__animation-mobile"></div>
+    </div>
+    <div class="ecocart-homepage-hero__phone">
+        <img
+            src="{{ image }}"
+            alt="homepage hero phone"
+        />
+        {# <img
+            class="lazyload"
+            data-src="{{ image }}"
+            data-sizes="auto"
+            alt="homepage hero phone"
+        /> #}
+    </div>
+</section>

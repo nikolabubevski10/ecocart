@@ -1,0 +1,90 @@
+<section id="js-ecocart-how-list" class="ecocart-how-list">
+    <div class="ecocart-how-list__dot-desktop">
+        <img
+            class="lazyload"
+            data-src="{{ dot_desktop }}"
+            data-sizes="auto"
+            alt="dot"
+        />
+    </div>
+    <div class="ecocart-how-list__dot-mobile">
+        <img
+            class="lazyload"
+            data-src="{{ dot_mobile }}"
+            data-sizes="auto"
+            alt="dot"
+        />
+    </div>
+    <div class="container">
+        <div class="dot-title">
+            <h3>{{ title }}</h3>
+        </div>
+        <div class="ecocart-how-list__img-mobile">
+            {% if animation == 'none' %}
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(list[0].image.width / 2, list[0].image.height / 2) }}"
+                    data-src="{{ list[0].image.src|resizeDynamic(list[0].image.width / 2) }}"
+                    data-srcset="{{ list[0].image.src|resizeDynamic(list[0].image.width / 2) }} 1x, {{ list[0].image.src|resizeDynamic(list[0].image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ list[0].image.alt|e }}"
+                />
+            {% else %}
+                <div id="js-ecocart-how-list__{{ animation }}-mobile-animation-0"></div>
+            {% endif %}
+        </div>
+        <div class="ecocart-how-list__row">
+            <div class="ecocart-how-list__left-col">
+                {% for index, item in list %}
+                    <div class="ecocart-how-list__info">
+                        <div
+                            class="
+                                ecocart-how-list__num
+                                {% if index + 1 < list|length %}ecocart-how-list__num--has-dot{% endif %}
+                            "
+                        >{{ index + 1 }}.</div>
+                        <div class="ecocart-how-list__info-title">{{ item.title }}</div>
+                        <p>{{ item.content }}</p>
+                        <div class="ecocart-how-list__info-link">
+                            <a class="arrow-link arrow-link--blue" href="{{ item.link.url }}">{{ item.link.title }}</a>
+                        </div>
+                        <div class="ecocart-how-list__info-img-mobile">
+                            {% if animation == 'none' %}
+                                <img
+                                    class="lazyload"
+                                    src="{{ placeholderImage(list[index + 1].image.width / 2, list[index + 1].image.height / 2) }}"
+                                    data-src="{{ list[index + 1].image.src|resizeDynamic(list[index + 1].image.width / 2) }}"
+                                    data-srcset="{{ list[index + 1].image.src|resizeDynamic(list[index + 1].image.width / 2) }} 1x, {{ list[index + 1].image.src|resizeDynamic(list[index + 1].image.width) }} 2x"
+                                    data-sizes="auto"
+                                    alt="{{ list[index + 1].image.alt|e }}"
+                                />
+                            {% else %}
+                                <div id="js-ecocart-how-list__{{ animation }}-mobile-animation-{{ index + 1 }}"></div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="ecocart-how-list__right-col">
+                <div class="ecocart-how-list__right-wrapper">
+                    {% for index, item in list %}
+                        <div  class="ecocart-how-list__right-img">
+                            {% if animation == 'none' %}
+                                <img
+                                    class="lazyload"
+                                    src="{{ placeholderImage(item.image.width / 2, item.image.height / 2) }}"
+                                    data-src="{{ item.image.src|resizeDynamic(item.image.width / 2) }}"
+                                    data-srcset="{{ item.image.src|resizeDynamic(item.image.width / 2) }} 1x, {{ item.image.src|resizeDynamic(item.image.width) }} 2x"
+                                    data-sizes="auto"
+                                    alt="{{ item.image.alt|e }}"
+                                />
+                            {% else %}
+                                <div id="js-ecocart-how-list__{{ animation }}-animation-{{ index }}"></div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

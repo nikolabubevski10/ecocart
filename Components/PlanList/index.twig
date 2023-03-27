@@ -1,0 +1,43 @@
+<section class="ecocart-plan-list">
+    <div class="container">
+        <div class="dot-title">
+            <h3>{{ pre_title }}</h3>
+        </div>
+        <div class="ecocart-plan-list__list">
+            <div class="ecocart-plan-list__header-row">
+                <div class="ecocart-plan-list__header-txt">Expand to compare plans</div>
+                <div class="ecocart-plan-list__header-free">
+                    {% include 'Assets/free.svg' %}
+                </div>
+                <div class="ecocart-plan-list__header-custom">
+                    {% include 'Assets/custom.svg' %}
+                </div>
+            </div>
+            {% for plan in plan_list %}
+                <div class="ecocart-plan-list__list-type">
+                    <div class="ecocart-plan-list__list-type-name">{{ plan.type }}</div>
+                    <div class="ecocart-plan-list__detail-wrapper" style="display: none;">
+                        {% for detail in plan.detail_list %}
+                            <div class="ecocart-plan-list__detail-item">
+                                <div class="ecocart-plan-list__detail-txt">{{ detail.detail }}</div>
+                                <div class="ecocart-plan-list__detail-free {% if not detail.free.link %}ecocart-plan-list__detail-dot {% if detail.free.active %}ecocart-plan-list__detail-dot-active{% endif %}{% endif %}">
+                                    {% if detail.free.link %}
+                                        <a class="arrow-link arrow-link--black" href="{{ detail.free.link.url }}">{{ detail.free.link.title }}</a>
+                                    {% endif %}
+                                </div>
+                                <div class="ecocart-plan-list__detail-custom {% if not detail.custom.link %}ecocart-plan-list__detail-dot {% if detail.custom.active %}ecocart-plan-list__detail-dot-active{% endif %}{% endif %}">
+                                    {% if detail.custom.link %}
+                                        <a class="arrow-link arrow-link--black arrow-link--mobile-small" href="{{ detail.custom.link.url }}">{{ detail.custom.link.title }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% if bottom_text %}
+            <div class="ecocart-plan-list__bottom-txt h1">{{ bottom_text }}</div>
+        {% endif %}
+    </div>
+</section>

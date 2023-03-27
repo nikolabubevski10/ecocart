@@ -1,0 +1,83 @@
+<section class="ecocart-other-resource">
+    <div class="container">
+        <div class="ecocart-other-resource__dot-img">
+            <img src="{{ dot.src }}" alt="{{ dot.alt }}">
+        </div>
+        <div class="ecocart-other-resource__dot-mobile">
+            <img src="{{ dot_mobile }}" alt="dot mobile">
+        </div>
+        <div class="dot-title dot-title--white">
+            <h3>OTHER RESOURCES</h3>
+        </div>
+        <div class="ecocart-other-resource__row">
+            {% for resource in resourceList %}
+                <div class="ecocart-other-resource__card">
+                    <div class="ecocart-other-resource__card-img">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(360, 190) }}"
+                            data-src="{{ resource.thumbnail.src|resizeDynamic(360, 190) }}"
+                            data-srcset="{{ resource.thumbnail.src|resizeDynamic(360, 190) }} 1x, {{ resource.thumbnail.src|resizeDynamic(720, 380) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ resource.thumbnail.alt|e }}"
+                        />
+                    </div>
+                    <div class="ecocart-other-resource__card-content">
+                        <div class="ecocart-other-resource__card-cat">
+                            <span>{{ resource.category }}</span>
+                        </div>
+                        <div class="ecocart-other-resource__card-txt">
+                            <h4>{{ resource.title }}</h4>
+                            <p>{{ resource.post_excerpt }}</p>
+                        </div>
+                        <div class="ecocart-other-resource__card-link">
+                            <a href="{{ resource.link }}" class="btn">View</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="ecocart-other-resource__slider" is="ecocart-other-resource-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for resource in resourceList %}
+                        <div class="swiper-slide">
+                            <div class="ecocart-other-resource__card">
+                                <div class="ecocart-other-resource__card-img">
+                                    <img
+                                        class="lazyload"
+                                        src="{{ placeholderImage(360, 190) }}"
+                                        data-src="{{ resource.thumbnail.src|resizeDynamic(360, 190) }}"
+                                        data-srcset="{{ resource.thumbnail.src|resizeDynamic(360, 190) }} 1x, {{ resource.thumbnail.src|resizeDynamic(720, 380) }} 2x"
+                                        data-sizes="auto"
+                                        alt="{{ resource.thumbnail.alt|e }}"
+                                    />
+                                </div>
+                                <div class="ecocart-other-resource__card-content">
+                                    <div class="ecocart-other-resource__card-cat">
+                                        <span>{{ resource.category }}</span>
+                                    </div>
+                                    <div class="ecocart-other-resource__card-txt">
+                                        <h4>{{ resource.title }}</h4>
+                                        <p>{{ resource.post_excerpt }}</p>
+                                    </div>
+                                    <div class="ecocart-other-resource__card-link">
+                                        <a href="{{ resource.link }}" class="btn">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="ecocart-other-resource__slider-btn-row">
+                <div class="ecocart-other-resource__slider-btn ecocart-other-resource__slider-btn--prev">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M0.792892 7.29289C0.402369 7.68342 0.402369 8.31658 0.792892 8.70711L7.15685 15.0711C7.54738 15.4616 8.18054 15.4616 8.57107 15.0711C8.96159 14.6805 8.96159 14.0474 8.57107 13.6569L2.91421 8L8.57107 2.34315C8.96159 1.95262 8.96159 1.31946 8.57107 0.928932C8.18054 0.538407 7.54738 0.538407 7.15685 0.928932L0.792892 7.29289ZM21.75 7L1.5 7L1.5 9L21.75 9L21.75 7Z" fill="#0F8354"/></svg>
+                </div>
+                <div class="ecocart-other-resource__slider-btn ecocart-other-resource__slider-btn--next">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M21.2071 8.70711C21.5976 8.31658 21.5976 7.68342 21.2071 7.29289L14.8431 0.928932C14.4526 0.538407 13.8195 0.538407 13.4289 0.928932C13.0384 1.31946 13.0384 1.95262 13.4289 2.34315L19.0858 8L13.4289 13.6569C13.0384 14.0474 13.0384 14.6805 13.4289 15.0711C13.8195 15.4616 14.4526 15.4616 14.8431 15.0711L21.2071 8.70711ZM0.25 9L20.5 9L20.5 7L0.25 7L0.25 9Z" fill="#0F8354"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

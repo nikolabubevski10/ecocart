@@ -1,0 +1,100 @@
+<section class="ecocart-verticals-hero {% if has_animation %}ecocart-verticals-hero--has-animation{% endif %}">
+    <div class="container">
+        <div class="ecocart-verticals-hero__img-desktop">
+            {% if has_animation %}
+                <img
+                    class="lazyload"
+                    data-src="{{ dot_desktop }}"
+                    data-sizes="auto"
+                    alt="dot desktop"
+                />
+            {% else %}
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                    data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                    data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image.alt|e }}"
+                    data-aos="fade-in"
+                    data-aos-duration="3000"
+                />
+            {% endif %}
+        </div>
+        <div class="ecocart-verticals-hero__img-mobile">
+            {% if has_animation %}
+                <img
+                    class="lazyload"
+                    data-src="{{ dot_mobile }}"
+                    data-sizes="auto"
+                    alt="dot mobile"
+                />
+            {% else %}
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(mobile_image.width / 2, mobile_image.height / 2) }}"
+                    data-src="{{ mobile_image.src|resizeDynamic(mobile_image.width / 2) }}"
+                    data-srcset="{{ mobile_image.src|resizeDynamic(mobile_image.width / 2) }} 1x, {{ mobile_image.src|resizeDynamic(mobile_image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ mobile_image.alt|e }}"
+                    data-aos="fade-in"
+                    data-aos-duration="3000"
+                />
+            {% endif %}
+        </div>
+        {% if has_animation %}
+            <div id="ecocart-verticals-hero__{{ animation }}-animation-wrapper">
+                <div id="js-ecocart-verticals-hero__{{ animation }}-animation" class="ecocart-lottie" data-animation-src="{{ animation_list[animation] }}"></div>
+            </div>
+        {% endif %}
+        <div class="ecocart-verticals-hero__inner">
+            <div class="ecocart-verticals-hero__info">
+                <div class="vertical-dot"></div>
+                <div 
+                    class="
+                        ecocart-verticals-hero__title
+                        {% if custom_title_width.apply %}ecocart-verticals-hero__title--custom-width{% endif %}
+                    "
+                    style="
+                        {% if custom_title_width.apply %}
+                            --ecocart-verticals-hero__title--custom-width-desktop: {{ custom_title_width.desktop }}px;
+                            --ecocart-verticals-hero__title--custom-width-mobile: {{ custom_title_width.mobile }}px;
+                        {% endif %}
+                    "
+                >
+                    <h1>{{ title }}</h1>
+                </div>
+                {% if content %}
+                    <div 
+                        class="
+                            ecocart-verticals-hero__content
+                            {% if custom_content_width.apply %}ecocart-verticals-hero__content--custom-width{% endif %}
+                        "
+                        style="
+                            {% if custom_content_width.apply %}
+                                --ecocart-verticals-hero__content--custom-width-desktop: {{ custom_content_width.desktop }}px;
+                                --ecocart-verticals-hero__content--custom-width-mobile: {{ custom_content_width.mobile }}px;
+                            {% endif %}
+                        "
+                    >
+                        <p>{{ content }}</p>
+                    </div>
+                {% endif %}
+            </div>
+            {% if link %}
+                <div class="{% if content %}ecocart-verticals-hero__link{% else %}ecocart-verticals-hero__link-large-top{% endif %}">
+                    {% if link_jump_section_id %}
+                        <button class="js-ecocart-verticals-hero-jump-btn btn btn--blue--dark" data-section-id="{{ link_jump_section_id }}">{{ link.title }}</button>
+                    {% else %}
+                        <a href="{{ link.url }}" class="btn btn--blue--dark">{{ link.title }}</a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+        {% if has_down_button %}
+            <div class="ecocart-verticals-hero__arrow-down">
+                <svg width="16" height="28" viewBox="0 0 16 28" fill="none"><path d="M7.29289 27.7071C7.68342 28.0976 8.31658 28.0976 8.70711 27.7071L15.0711 21.3431C15.4616 20.9526 15.4616 20.3195 15.0711 19.9289C14.6805 19.5384 14.0474 19.5384 13.6569 19.9289L8 25.5858L2.34315 19.9289C1.95262 19.5384 1.31946 19.5384 0.928932 19.9289C0.538408 20.3195 0.538408 20.9526 0.928932 21.3431L7.29289 27.7071ZM7 0L7 27H9L9 0L7 0Z" fill="#15E682"/></svg>
+            </div>
+        {% endif %}
+    </div>
+</section>

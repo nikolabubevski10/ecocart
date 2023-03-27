@@ -1,0 +1,32 @@
+<section class="ecocart-post-hero">
+    <div class="ecocart-post-hero--top">
+        <div class="container">
+            <div class="ecocart-post-hero__dot-desktop">
+                <img src="{{ dot.src }}" alt="{{ dot.alt }}">
+            </div>
+            <div class="ecocart-post-hero__dot-mobile">
+                <img src="{{ dot_mobile.src }}" alt="{{ dot_mobile.alt }}">
+            </div>
+        </div>
+    </div>
+    <div class="ecocart-post-hero--bottom">
+        <div class="container">
+            <div class="ecocart-post-hero__back">
+                <a class="back-link" href="{{ archive_link.url }}">{{ archive_link.title }}</a>
+            </div>
+            <div class="ecocart-post-hero__title">
+                <h1>{{ post.title }}</h1>
+            </div>
+            <div class="ecocart-post-hero__img">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(1120, 455) }}"
+                    data-src="{{ post.thumbnail.src|resizeDynamic(1120, 455) }}"
+                    data-srcset="{{ post.thumbnail.src|resizeDynamic(1120, 455) }} 1x, {{ post.thumbnail.src|resizeDynamic(2240, 910) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ post.thumbnail.alt|e }}"
+                />
+            </div>
+        </div>
+    </div>
+</section>

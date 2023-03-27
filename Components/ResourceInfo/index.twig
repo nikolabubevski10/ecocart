@@ -1,0 +1,79 @@
+<section class="ecocart-resource-info">
+    <div class="container">
+        <div class="ecocart-resource-info__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop image"
+            />
+        </div>
+        <div class="ecocart-resource-info__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile image"
+            />
+        </div>
+        <div class="dot-title dot-title--white">
+            <h3>{{ pre_title }}</h3>
+        </div>
+        <div class="ecocart-resource-info__top-row">
+            <div class="ecocart-resource-info__top-left-col">
+                <div class="ecocart-resource-info__top-img">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                        data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                        data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image.alt|e }}"
+                    />
+                </div>
+            </div>
+            <div class="ecocart-resource-info__top-right-col">
+                <div class="ecocart-resource-info__col-title">{{ pre_title_1 }}</div>
+                <div class="ecocart-resource-info__col-content">
+                    <h3>{{ title_1 }}</h3>
+                    <p>{{ content_1 }}</p>
+                </div>
+                <div class="ecocart-resource-info__col-link">
+                    <a class="arrow-link" href="{{ link_1.url }}">{{ link_1.title }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="ecocart-resource-info__row">
+            <div class="ecocart-resource-info__col">
+                <div class="ecocart-resource-info__col-title">{{ pre_title_2 }}</div>
+                <div class="ecocart-resource-info__col-content">
+                    <h3>{{ title_2 }}</h3>
+                    <p>{{ content_2 }}</p>
+                </div>
+                <div class="ecocart-resource-info__col-link">
+                    <a class="arrow-link" href="{{ link_2.url }}">{{ link_2.title }}</a>
+                </div>
+            </div>
+            <div class="ecocart-resource-info__col">
+                <div class="ecocart-resource-info__col-title">{{ pre_title_3 }}</div>
+                <div class="ecocart-resource-info__col-content">
+                    <h3>{{ title_3 }}</h3>
+                    <p>{{ content_3 }}</p>
+                </div>
+                <div class="ecocart-resource-info__col-link">
+                    <a class="arrow-link" href="{{ link_3.url }}">{{ link_3.title }}</a>
+                </div>
+            </div>
+            <div class="ecocart-resource-info__col">
+                <div class="ecocart-resource-info__col-title">{{ pre_title_4 }}</div>
+                <div class="ecocart-resource-info__col-content">
+                    <h3>{{ title_4 }}</h3>
+                    <p>{{ content_4 }}</p>
+                </div>
+                <div class="ecocart-resource-info__col-link">
+                    <a class="arrow-link" href="{{ link_4.url }}">{{ link_4.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,83 @@
+<section class="ecocart-sustainable-list">
+    <div class="container">
+        <div class="ecocart-sustainable-list__dot">
+            <img
+                class="lazyload"
+                data-src="{{ dot }}"
+                data-sizes="auto"
+                alt="dot"
+            />
+        </div>
+        <div class="ecocart-sustainable-list__dot-mobile-top">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile_top }}"
+                data-sizes="auto"
+                alt="dot"
+            />
+        </div>
+        <div class="ecocart-sustainable-list__dot-mobile-middle">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile_middle }}"
+                data-sizes="auto"
+                alt="dot"
+            />
+        </div>
+        <div class="ecocart-sustainable-list__dot-mobile-bottom">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile_bottom }}"
+                data-sizes="auto"
+                alt="dot"
+            />
+        </div>
+        <div class="dot-title">
+            <h3>{{ title }}</h3>
+        </div>
+        <div class="ecocart-sustainable-list__img">
+            {% if animation == 'none' %}
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                    data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                    data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image.alt|e }}"
+                />
+            {% else %}
+                <div id="js-ecocart-sustainable-list__{{ animation }}-long-animation" class="ecocart-lottie" data-animation-src="{{ animation_list['long'] }}"></div>
+            {% endif %}
+        </div>
+        {% for index, item in list %}
+            <div
+                class="ecocart-sustainable-list__row ecocart-sustainable-list__row-{{ index }} {% if index % 2 != 1 %}ecocart-sustainable-list__row--reverse{% endif %}"
+                style="
+                    --ecocart-sustainable-list__row-{{ index }}-top-space-desktop: {{ item.top_space.desktop }}px;
+                    --ecocart-sustainable-list__row-{{ index }}-top-space-mobile: {{ item.top_space.mobile }}px;
+                "
+            >
+                <div class="ecocart-sustainable-list__img-col">
+                    {% if animation == 'none' %}
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(item.image.width / 2, item.image.height / 2) }}"
+                            data-src="{{ item.image.src|resizeDynamic(item.image.width / 2) }}"
+                            data-srcset="{{ item.image.src|resizeDynamic(item.image.width / 2) }} 1x, {{ item.image.src|resizeDynamic(item.image.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ item.image.alt|e }}"
+                        />
+                    {% else %}
+                        <div id="js-ecocart-sustainable-list__{{ animation }}-animation-{{ index }}" class="ecocart-lottie" data-animation-src="{{ animation_list['shopping'][index] }}"></div>
+                    {% endif %}
+                </div>
+                <div class="ecocart-sustainable-list__content-col">
+                    <div class="ecocart-sustainable-list__content-col-inner">
+                        <h2>{{ item.title }}</h2>
+                        <p>{{ item.content }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

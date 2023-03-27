@@ -1,0 +1,110 @@
+.ecocart-block-content-image-down--dark {
+  background-color: $color-dark-green;
+  color: $color-white;
+}
+
+.ecocart-block-content-image-down {
+  overflow: hidden;
+  padding: 65px 0 60px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-block-content-image-down__dot-desktop {
+  position: absolute;
+  right: -175px;
+  top: 200px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-block-content-image-down__dot-mobile {
+  position: absolute;
+  right: -20px;
+  top: 90px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-block-content-image-down__content {
+  p {
+    margin-top: 28px;
+  }
+}
+
+.ecocart-block-content-image-down__link {
+  margin-top: 29px;
+}
+
+.ecocart-block-content-image-down__img {
+  margin-top: 50px;
+}
+
+.ecocart-block-content-image-down__ecocart-project-network-mobile-img {
+  margin-top: 35px;
+  text-align: center;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-block-content-image-down__content {
+    margin-top: 60px;
+  }
+
+  .ecocart-block-content-image-down__dot-desktop {
+    display: none;
+  }
+
+  .ecocart-block-content-image-down__img {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+
+  .ecocart-block-content-image-down__img--mobile-hide {
+    display: none;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-block-content-image-down {
+    padding: 120px 0 110px;
+  }
+
+  .ecocart-block-content-image-down__content {
+    margin-top: 90px;
+  }
+
+  .ecocart-block-content-image-down__img--more-top-space {
+    margin-top: 107px;
+  }
+
+  .ecocart-block-content-image-down__info-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .ecocart-block-content-image-down__dot-mobile {
+    display: none;
+  }
+
+  #js-ecocart-block-content-image-down__animation--offsetting-incentivizes-mitigation {
+    // height: 528px;
+    // width: 1120px;
+    max-width: 1120px;
+  }
+  
+  #js-ecocart-block-content-image-down__animation--ecocart-project-network {
+    max-width: 1120px;
+  }
+
+  .ecocart-block-content-image-down__ecocart-project-network-mobile-img {
+    display: none;
+  }
+}

@@ -1,0 +1,167 @@
+.ecocart-left-content-image-white {
+  overflow: hidden;
+  padding: 70px 0 40px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-left-content-image-white__dot-desktop {
+  position: absolute;
+  right: -200px;
+  top: -25px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-left-content-image-white__dot-mobile {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-left-content-image-white__left-col {
+  h2 {
+    margin-bottom: 26px;
+  }
+
+  p+p {
+    margin-top: 28px;
+  }
+}
+
+.ecocart-left-content-image-white__img {
+  height: 277px;
+  position: relative;
+  width: 290px;
+
+  img {
+    position: absolute;
+  }
+}
+
+.ecocart-left-content-image-white__img-1 {
+  z-index: 2;
+}
+
+.ecocart-left-content-image-white__img-2 {
+  z-index: 3;
+}
+
+.ecocart-left-content-image-white__img-3 {
+  z-index: 1;
+}
+
+.ecocart-left-content-image-white__img-4 {
+  z-index: 4;
+}
+
+.ecocart-left-content-image-white__img-5 {
+  z-index: 5;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-left-content-image-white__dot-desktop {
+    display: none;
+  }
+
+  .ecocart-left-content-image-white__left-col {
+    margin-top: 26px;
+  }
+
+  .ecocart-left-content-image-white__right-col {
+    margin-top: 70px;
+  }
+
+  .ecocart-left-content-image-white__img-1 {
+    left: -17px;
+    top: 12px;
+    width: 252px;
+  }
+  
+  .ecocart-left-content-image-white__img-2 {
+    right: 0;
+    top: 0;
+    width: 168px;
+  }
+  
+  .ecocart-left-content-image-white__img-3 {
+    left: 68px;
+    top: 40px;
+    width: 188px;
+  }
+  
+  .ecocart-left-content-image-white__img-4 {
+    bottom: -15px;
+    left: -8px;
+    width: 133px;
+  }
+  
+  .ecocart-left-content-image-white__img-5 {
+    bottom: -10px;
+    right: -18px;
+    width: 134px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-left-content-image-white {
+    padding: 116px 0 95px;
+  }
+
+  .ecocart-left-content-image-white__row {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 84px;
+  }
+
+  .ecocart-left-content-image-white__left-col {
+    max-width: 500px;
+    padding-right: 50px;
+  }
+
+  .ecocart-left-content-image-white__dot-mobile {
+    display: none;
+  }
+
+  .ecocart-left-content-image-white__img {
+    height: 494px;
+    width: 522px;
+  }
+  
+  .ecocart-left-content-image-white__img-1 {
+    left: -32px;
+    top: 22px;
+  }
+  
+  .ecocart-left-content-image-white__img-2 {
+    right: 0;
+    top: 0;
+  }
+  
+  .ecocart-left-content-image-white__img-3 {
+    left: 119px;
+    top: 68px;
+  }
+  
+  .ecocart-left-content-image-white__img-4 {
+    bottom: -36px;
+    left: -19px;
+  }
+  
+  .ecocart-left-content-image-white__img-5 {
+    bottom: -21px;
+    right: -31px;
+  }
+}

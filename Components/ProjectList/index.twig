@@ -1,0 +1,67 @@
+<section class="ecocart-project-list">
+    <div class="ecocart-project-list-dot-wrapper">
+        <div class="ecocart-project-list__top-dot">
+            <img src="{{ bottom_dot }}" alt="dot">
+        </div>
+        <div class="ecocart-project-list__bottom-dot">
+            <img src="{{ bottom_dot }}" alt="dot">
+        </div>
+    </div>
+    <div class="container">
+        <div class="ecocart-project-list__filter-row">
+            <div class="ecocart-project-list__filter-col">
+                <div class="ecocart-project-list__dropdown">
+                    <div class="ecocart-project-list__dropdown-label">Order By Time: <span>DESC</span></div>
+                    <div class="ecocart-project-list__dropdown-list" style="display: none;">
+                        <div class="ecocart-project-list__dropdown-list-item ecocart-project-list__dropdown-list-item--orderby selected" data-orderby="DESC">DESC</div>
+                        <div class="ecocart-project-list__dropdown-list-item ecocart-project-list__dropdown-list-item--orderby" data-orderby="ASC">ASC</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ecocart-project-list__filter-col">
+                <div class="ecocart-project-list__dropdown">
+                    <div class="ecocart-project-list__dropdown-label">Sort By Project: <span>All</span></div>
+                    <div class="ecocart-project-list__dropdown-list" style="display: none;">
+                            <div class="ecocart-project-list__dropdown-list-item ecocart-project-list__dropdown-list-item--project-type selected" data-slug="0">All</div>
+                        {% for projectTypeTerm in projectTypeTerms %}
+                            <div class="ecocart-project-list__dropdown-list-item ecocart-project-list__dropdown-list-item--project-type" data-slug="{{ projectTypeTerm.slug }}">{{ projectTypeTerm.name }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ecocart-project-list__grid">
+            <div class="ecocart-project-list__card-wrapper">
+                {% include 'Partials/offset-project-list.twig' ignore missing with {offsetProjects: offsetProjects} only %}
+            </div>
+            <div class="ecocart-project-list__map">
+                <div class="ecocart-project-list__map-wrapper">
+                    <div id="js-ecocart-project-list__map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    window.ecocartOffsetProjectList = {
+        'type': 'geojson',
+        'data': {
+            'type': 'FeatureCollection',
+            'features': [
+                {% for offsetProject in offsetProjects %}
+                    {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [{{ offsetProject.meta('google_map_point').lng }}, {{ offsetProject.meta('google_map_point').lat }}]
+                        },
+                        'properties' : {
+                            'title' : '{{ offsetProject.title }}',
+                            'link' : '{{ offsetProject.link }}'
+                        }
+                    },
+                {% endfor %}
+            ]
+        }
+    }
+</script>

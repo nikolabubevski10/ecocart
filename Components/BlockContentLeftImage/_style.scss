@@ -1,0 +1,140 @@
+.ecocart-block-content-left-image {
+  background-color: $color-dark-green;
+  color: $color-white;
+  overflow: hidden;
+
+  .container {
+    padding-bottom: 67px;
+    padding-top: 48px;
+    position: relative;
+  }
+}
+
+.ecocart-block-content-left-image__dot-desktop {
+  position: absolute;
+  right: -143px;
+  top: 76px;
+  z-index: 1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-block-content-left-image__dot-mobile {
+  position: absolute;
+  right: -15px;
+  top: 67px;
+  z-index: 1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-block-content-left-image__row {
+  position: relative;
+  z-index: 2;
+}
+
+.ecocart-block-content-left-image__left-col {
+  padding-top: 11px;
+
+  h2 {
+    margin-bottom: 26px;
+  }
+
+  p+p {
+    margin-top: 28px;
+  }
+}
+
+.ecocart-block-content-left-image__link {
+  margin-top: 28px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-block-content-left-image__dot-desktop {
+    display: none;
+  }
+
+  .ecocart-block-content-left-image__right-col {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  .ecocart-block-content-left-image__img-1 {
+    padding: 15px;
+    width: 148px;
+  }
+
+  .ecocart-block-content-left-image__img-2 {
+    padding: 15px;
+    width: 148px;
+  }
+
+  .ecocart-block-content-left-image__img-3 {
+    padding: 15px;
+    width: 148px;
+  }
+
+  .ecocart-block-content-left-image__img-4 {
+    padding: 15px;
+    width: 148px;
+  }
+
+  .ecocart-block-content-left-image__img-5 {
+    padding: 15px;
+    width: 148px;
+  }
+
+  .ecocart-block-content-left-image__row {
+    margin-top: 13px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-block-content-left-image {
+    .container {
+      padding-bottom: 125px;
+      padding-top: 108px;
+    }
+  }
+
+  .ecocart-block-content-left-image__row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 28px;
+  }
+
+  .ecocart-block-content-left-image__left-col {
+    padding: 56px 50px 0 0;
+    width: 800px;
+  }
+
+  .ecocart-block-content-left-image__link {
+    margin-top: 40px;
+  }
+
+  .ecocart-block-content-left-image__img-2 {
+    padding: 15px 0 0 40px;
+  }
+
+  .ecocart-block-content-left-image__img-3 {
+    padding: 20px 0 0;
+  }
+
+  .ecocart-block-content-left-image__img-4 {
+    padding: 20px 0 0 40px;
+  }
+
+  .ecocart-block-content-left-image__img-5 {
+    padding: 20px 0 0;
+  }
+
+  .ecocart-block-content-left-image__dot-mobile {
+    display: none;
+  }
+}

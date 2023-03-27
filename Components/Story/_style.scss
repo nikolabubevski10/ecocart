@@ -1,0 +1,123 @@
+.ecocart-story {
+  padding: 64px 0;
+}
+
+.ecocart-story__row {
+  background-color: $color-dark-green;
+  border-radius: 5px;
+  color: $color-white;
+  margin-top: 58px;
+  padding: 39px 25px;
+}
+
+.ecocart-story__left-title {
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  line-height: 1.75;
+}
+
+.ecocart-story__left-content {
+  margin-top: 30px;
+
+  p {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.ecocart-story__right-content {
+  p {
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    line-height: 1.5;
+  }
+}
+
+.ecocart-story__user-row {
+  align-items: center;
+  display: flex;
+  margin-top: 19px;
+}
+
+.ecocart-story__user-avatar {
+  width: 56px;
+}
+
+.ecocart-story__user-info {
+  padding-left: 18px;
+  width: calc(100% - 56px);
+}
+
+.ecocart-story__user-info-name {
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.2em;
+  line-height: 1.26;
+  text-transform: uppercase;
+}
+
+.ecocart-story__user-info-role {
+  color: $color-teal;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.2em;
+  line-height: 1.26;
+  margin-top: 7px;
+  text-transform: uppercase;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-story__left-link {
+    margin-top: 22px;
+  }
+
+  .ecocart-story__right-col {
+    margin-top: 37px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-story {
+    padding: 123px 0;
+  }
+
+  .ecocart-story__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 101px;
+    padding: 71px 64px 66px 48px;
+  }
+
+  .ecocart-story__left-col {
+    max-width: 400px;
+    padding-right: 50px;
+    position: relative;
+  }
+
+  .ecocart-story__right-col {
+    width: 500px;
+  }
+
+  .ecocart-story__right-content {
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .ecocart-story__user-row {
+    margin-top: 19px;
+  }
+
+  .ecocart-story__user-avatar {
+    width: 65px;
+  }
+
+  .ecocart-story__user-info {
+    width: calc(100% - 65px);
+  }
+
+  .ecocart-story__left-link {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+}

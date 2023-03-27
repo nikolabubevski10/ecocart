@@ -1,0 +1,17 @@
+<section class="ecocart-blog-hero">
+    <div class="ecocart-blog-hero__img">
+        <img
+            class="lazyload"
+            src="{{ placeholderImage(image.width, image.height) }}"
+            data-src="{{ image.src|resizeDynamic(image.width) }}"
+            data-sizes="auto"
+            alt="{{ image.alt|e }}"
+        />
+    </div>
+    <div class="container">
+        <div class="ecocart-blog-hero__content">
+            <h1>{{ title }}</h1>
+            <p>{{ content }}</p>
+        </div>
+    </div>
+</section>

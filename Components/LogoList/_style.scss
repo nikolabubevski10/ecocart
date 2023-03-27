@@ -1,0 +1,64 @@
+.ecocart-logo-list {
+  background-color: $color-green;
+  padding: 37px 0 31px;
+}
+
+.ecocart-logo-list__row {
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  row-gap: 30px;
+}
+
+.ecocart-logo-list__title {
+  color: $color-white;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  line-height: 1.575;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.ecocart-logo-list__img {
+  align-items: center;
+  display: flex;
+  height: 42px;
+  
+  img {
+    max-height: 100%;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-logo-list__row {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+
+@media(min-width: 550px) {
+  .ecocart-logo-list__row {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-logo-list {
+    padding: 75px 0 71px;
+  }
+
+  .ecocart-logo-list--small-padding-top {
+    padding-top: 48px;
+  }
+
+  .ecocart-logo-list__title {
+    font-size: 24px;
+    line-height: 1.17;
+    margin: 0 0 42px;
+  }
+
+  .ecocart-logo-list__row {
+    grid-template-columns: repeat(6, auto);
+  }
+}

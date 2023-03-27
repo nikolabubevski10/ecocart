@@ -1,0 +1,107 @@
+.ecocart-faq {
+  overflow: hidden;
+
+  .container {
+    padding-bottom: 64px;
+    padding-top: 64px;
+    position: relative;
+  }
+}
+
+.ecocart-faq__dot-img {
+  bottom: 0;
+  position: absolute;
+  right: -140px;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-faq--gray {
+  background-color: $color-shade;
+}
+
+.ecocart-faq__list {
+  margin-top: 64px;
+}
+
+.ecocart-faq__item-title {
+  background-color: rgba($color-white, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  line-height: 1.43;
+  padding: 22px 45px 22px 14px;
+  position: relative;
+  user-select: none;
+
+  &::after {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAyMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMkwxMS4yMzU4IDExLjIzNThMMjAuNDcxNiAyIiBzdHJva2U9IiMwMDFEMkMiIHN0cm9rZS13aWR0aD0iMy4wNzg1OSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    height: 10px;
+    position: absolute;
+    right: 15px;
+    top: 26px;
+    transition: transform 0.2s ease-out;
+    width: 16px;
+  }
+}
+
+.ecocart-faq__item-title--white {
+  background-color: #fbfbfb;
+}
+
+.ecocart-faq__item-title--open {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.ecocart-faq__item+.ecocart-faq__item {
+  margin-top: 12px;
+}
+
+.ecocart-faq__item-content {
+  padding: 12px 32px;
+
+  p+p {
+    margin-top: 28px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-faq__dot-img {
+    display: none;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-faq {
+    .container {
+      padding-bottom: 135px;
+      padding-top: 110px;
+    }
+  }
+
+  .ecocart-faq__list {
+    margin-top: 100px;
+  }
+
+  .ecocart-faq__item-title {
+    font-size: 20px;
+    line-height: 1.575;
+    padding: 12px 80px 12px 32px;
+
+    &::after {
+      height: 13px;
+      right: 25px;
+      top: 22px;
+      width: 23px;
+    }
+  }
+}

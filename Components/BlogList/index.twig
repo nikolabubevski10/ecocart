@@ -1,0 +1,45 @@
+<section class="ecocart-blog-list">
+    <div class="container">
+        <div class="ecocart-blog-list__top-dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ top_dot_desktop }}"
+                data-sizes="auto"
+                alt="top dot desktop"
+            />
+        </div>
+        <div class="ecocart-blog-list__bottom-dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ bottom_dot_desktop }}"
+                data-sizes="auto"
+                alt="bottom dot desktop"
+            />
+        </div>
+        <div class="ecocart-blog-list__cat-dropdown">
+            <div class="ecocart-blog-list__cat-dropdown-label">All</div>
+            <div class="ecocart-blog-list__cat-row">
+                <div class="ecocart-blog-list__cat-item {% if current_cat_id == 0 %}selected{% endif %}">
+                    <span data-cat-id="0">All</span>
+                </div>
+                {% for category in category_terms %}
+                    <div class="ecocart-blog-list__cat-item {% if current_cat_id == category.id %}selected{% endif %}">
+                        <span data-cat-id="{{ category.id }}">{{ category.name }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="ecocart-blog-list__grid {% if total_blog_count > current_blog_count %}ecocart-blog-list__grid-has-more{% endif %}" data-current-count="{{ current_blog_count }}" data-total-count="{{ total_blog_count }}" data-cat-id="{{ current_cat_id }}">
+            {% include 'Partials/blog-grid.twig' ignore missing with {blog_list: blog_list} only %}
+        </div>
+        <div class="ecocart-blog-list__infinite-spin ecocart-hide">
+            <img
+                class="lazyload"
+                data-src="{{ spin }}"
+                data-sizes="auto"
+                alt="spin"
+            />
+        </div>
+    </div>
+</section>
+<div class="ecocart-ajax-spinner ecocart-blog-list__ajax-spinner ecocart-hide"></div>

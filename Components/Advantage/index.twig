@@ -1,0 +1,54 @@
+<section class="ecocart-advantage ecocart-advantage--{{ background_color }}">
+    <div class="container">
+        <div class="ecocart-advantage__title ecocart-advantage__title--{{ title_position }}">
+            <h2>{{ title }}</h2>
+        </div>
+        <div class="ecocart-advantage__grid">
+            <div class="ecocart-advantage__col">
+                <div class="ecocart-advantage__val">
+                    {{ value_1 }}
+                </div>
+                <div class="ecocart-advantage__content">
+                    <h3>{{ sub_title_1 }}</h3>
+                    <p>{{ sub_content_1 }}</p>
+                </div>
+            </div>
+            <div class="ecocart-advantage__col">
+                <div class="ecocart-advantage__val">
+                    {{ value_2 }}
+                </div>
+                <div class="ecocart-advantage__content">
+                    <h3>{{ sub_title_2 }}</h3>
+                    <p>{{ sub_content_2 }}</p>
+                </div>
+            </div>
+            <div class="ecocart-advantage__col">
+                <div class="ecocart-advantage__val">
+                    {{ value_3 }}
+                </div>
+                <div class="ecocart-advantage__content">
+                    <h3>{{ sub_title_3 }}</h3>
+                    <p>{{ sub_content_3 }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if has_dot_background %}
+        <div class="ecocart-advantage__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop image"
+            />
+        </div>
+        <div class="ecocart-advantage__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile image"
+            />
+        </div>
+    {% endif %}
+</section>

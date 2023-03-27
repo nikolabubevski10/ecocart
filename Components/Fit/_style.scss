@@ -1,0 +1,65 @@
+.ecocart-fit {
+  background-color: $color-dark-green;
+  color: $color-white;
+  padding: 64px 0;
+}
+
+.ecocart-fit__card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 2.1831px 13.0986px rgba(0, 0, 0, 0.15);
+  padding: 26px;
+}
+
+.ecocart-fit__card-content {
+  margin-top: 17px;
+
+  p {
+    margin-top: 26px;
+  }
+}
+
+.ecocart-fit__grid {
+  margin-top: 50px;
+}
+
+.ecocart-fit__link {
+  margin-top: 60px;
+  text-align: center;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-fit__card+.ecocart-fit__card {
+    margin-top: 24px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-fit {
+    padding: 108px 0 73px;
+  }
+
+  .ecocart-fit__grid {
+    column-gap: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 108px;
+  }
+
+  .ecocart-fit__card {
+    height: 100%;
+    padding: 32px;
+  }
+
+  .ecocart-fit__card-content {
+    margin-top: 19px;
+
+    p {
+      margin-top: 44px;
+    }
+  }
+
+  .ecocart-fit__link {
+    margin-top: 72px;
+  }
+}

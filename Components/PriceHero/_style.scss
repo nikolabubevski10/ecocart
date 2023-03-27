@@ -1,0 +1,101 @@
+.ecocart-price-hero {
+  background-color: $color-dark-green;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-price-hero__content {
+  color: $color-white;
+
+  h1 {
+    position: relative;
+  }
+
+  p {
+    margin-top: 23px;
+  }
+}
+
+.ecocart-price-hero__card-header {
+  align-items: flex-end;
+  background-color: $color-gray;
+  display: flex;
+  height: 62px;
+  padding: 22px 27px;
+}
+
+.ecocart-price-hero__card-header--green {
+  background-color: #39b54a;
+}
+
+.ecocart-price-hero__card {
+  background-color: $color-white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ecocart-price-hero__card-content {
+  padding: 34px 26px 22px;
+
+  h3 {
+    letter-spacing: 0.2em;
+    line-height: 1.26;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.67;
+    margin-top: 16px;
+  }
+}
+
+.ecocart-price-hero__card-link {
+  margin-top: 40px;
+}
+
+.ecocart-price-hero__card-row {
+  margin-top: 73px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-price-hero {
+    padding: 110px 0 78px;
+  }
+
+  .ecocart-price-hero__card-col+.ecocart-price-hero__card-col {
+    margin-top: 24px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-price-hero {
+    height: 770px;
+  }
+
+  .ecocart-price-hero__content {
+    margin-top: 184px;
+    max-width: 900px;
+
+    p {
+      margin-top: 26px;
+    }
+  }
+
+  .ecocart-price-hero__card {
+    height: 100%;
+  }
+
+  .ecocart-price-hero__card-row {
+    display: flex;
+    margin: 45px -33px 0;
+  }
+
+  .ecocart-price-hero__card-col {
+    padding: 0 33px;
+    width: 50%;
+  }
+}

@@ -1,0 +1,49 @@
+<section class="ecocart-icon-list">
+    <div class="container">
+        <div class="ecocart-icon-list__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop"
+            />
+        </div>
+        <div class="ecocart-icon-list__dot-mobile-top">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile"
+            />
+        </div>
+        <div class="ecocart-icon-list__dot-mobile-bottom">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile"
+            />
+        </div>
+        <div class="ecocart-icon-list__grid">
+            {% for index, icon in icon_list %}
+                <div class="ecocart-icon-list__card">
+                    <div class="ecocart-icon-list__card-img">
+                        {% if animation == 'none' %}
+                            <img
+                                class="lazyload"
+                                data-src="{{ icon.image.src }}"
+                                data-sizes="auto"
+                                alt="{{ icon.image.alt|e }}"
+                            />
+                        {% else %}
+                            <div id="js-ecocart-icon-list__card-{{ animation }}-animation-{{ index }}" class="ecocart-lottie" data-animation-src="{{ animation_list[index] }}"></div>
+                        {% endif %}
+                    </div>
+                    <div class="ecocart-icon-list__card-txt">
+                        <h3>{{ icon.title }}</h3>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

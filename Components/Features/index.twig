@@ -1,0 +1,91 @@
+<section class="ecocart-features">
+    <div class="ecocart-features--top {% if section_small_padding %}ecocart-features--small-padding{% endif %}">
+        <div class="container">
+            <div class="dot-title dot-title--white">
+                <h3>{{ title }}</h3>
+            </div>
+            <div class="ecocart-features__wrapper">
+                {% for index, item in list %}
+                    <div class="ecocart-features__row {% if index % 2 != 1 %}ecocart-features__row--reverse{% endif %}">
+                        <div class="ecocart-features__img-col">
+                            {% if animation_setting != 'none' %}
+                                <div 
+                                    id="js-ecocart-features__animation-{{ animation_setting }}-{{ index }}" 
+                                    class="ecocart-lottie"
+                                    data-animation-src="{{ animation_list[index] }}"
+                                ></div>
+                            {% else %}
+                                <img
+                                    class="lazyload"
+                                    src="{{ placeholderImage(item.image.width / 2, item.image.height / 2) }}"
+                                    data-src="{{ item.image.src|resizeDynamic(item.image.width / 2) }}"
+                                    data-srcset="{{ item.image.src|resizeDynamic(item.image.width / 2) }} 1x, {{ item.image.src|resizeDynamic(item.image.width) }} 2x"
+                                    data-sizes="auto"
+                                    alt="{{ item.image.alt|e }}"
+                                />
+                            {% endif %}
+                        </div>
+                        <div class="ecocart-features__content-col">
+                            <h2>{{ item.title }}</h2>
+                            <p>{{ item.content }}</p>
+                            <div class="ecocart-features__content-link">
+                                <a class="arrow-link" href="{{ item.link.url }}">{{ item.link.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            {% if has_left_dot_background %}
+                <div class="ecocart-features__left-dot-desktop">
+                    <img
+                        class="lazyload"
+                        data-src="{{ left_dot_desktop }}"
+                        data-sizes="auto"
+                        alt="left dot image desktop"
+                    />
+                </div>
+            {% endif %}
+            {% if has_right_dot_background %}
+                <div class="ecocart-features__right-dot-desktop">
+                    <img
+                        class="lazyload"
+                        data-src="{{ right_dot_desktop }}"
+                        data-sizes="auto"
+                        alt="right dot image desktop"
+                    />
+                </div>
+                <div class="ecocart-features__right-dot-mobile">
+                    <img
+                        class="lazyload"
+                        data-src="{{ right_dot_mobile }}"
+                        data-sizes="auto"
+                        alt="right dot image mobile"
+                    />
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% if title_2 %}
+        <div class="ecocart-features--bottom">
+            <div class="container">
+                <div class="ecocart-features__press">
+                    <div class="ecocart-features__press-title">
+                        <h3>{{ title_2 }}</h3>
+                    </div>
+                    <div class="ecocart-features__press-row">
+                        {% for item in list_2 %}
+                            <div class="ecocart-features__press-col">
+                                <img
+                                    class="lazyload"
+                                    data-src="{{ item.image.src }}"
+                                    data-sizes="auto"
+                                    alt="{{ item.image.alt|e }}"
+                                />
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</section>

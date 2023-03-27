@@ -1,0 +1,84 @@
+<section class="ecocart-block-4-col-text">
+    <div class="container">
+        <div class="dot-title">
+            <h3>{{ pre_title }}</h3>
+        </div>
+        <div class="ecocart-block-4-col-text__title">
+            <h2>{{ title }}</h2>
+        </div>
+        <div class="ecocart-block-4-col-text__row">
+            <div class="ecocart-block-4-col-text__col">
+                <div class="ecocart-block-4-col-text__col-img">
+                    {% if animation == 'none' %}
+                        <img
+                            class="lazyload"
+                            data-src="{{ icon_1.src }}"
+                            data-sizes="auto"
+                            alt="{{ icon_1.alt|e }}"
+                        />
+                    {% else %}
+                        <div id="js-ecocart-block-4-col-text__{{ animation }}-animation-1" class="ecocart-lottie" data-animation-src="{{ animation_list[0] }}"></div>
+                    {% endif %}
+                </div>
+                <div class="ecocart-block-4-col-text__col-content">
+                    <h3>{{ title_1 }}</h3>
+                    {{ content_1|apply_filters('the_content') }}
+                </div>
+            </div>
+            <div class="ecocart-block-4-col-text__col">
+                <div class="ecocart-block-4-col-text__col-img">
+                    {% if animation == 'none' %}
+                        <img
+                            class="lazyload"
+                            data-src="{{ icon_2.src }}"
+                            data-sizes="auto"
+                            alt="{{ icon_2.alt|e }}"
+                        />
+                    {% else %}
+                        <div id="js-ecocart-block-4-col-text__{{ animation }}-animation-2" class="ecocart-lottie" data-animation-src="{{ animation_list[1] }}"></div>
+                    {% endif %}
+                </div>
+                <div class="ecocart-block-4-col-text__col-content">
+                    <h3>{{ title_2 }}</h3>
+                    {{ content_2|apply_filters('the_content') }}
+                </div>
+            </div>
+            <div class="ecocart-block-4-col-text__col">
+                <div class="ecocart-block-4-col-text__col-img">
+                    {% if animation == 'none' %}
+                        <img
+                            class="lazyload"
+                            data-src="{{ icon_3.src }}"
+                            data-sizes="auto"
+                            alt="{{ icon_3.alt|e }}"
+                        />
+                    {% else %}
+                        <div id="js-ecocart-block-4-col-text__{{ animation }}-animation-3" class="ecocart-lottie" data-animation-src="{{ animation_list[2] }}"></div>
+                    {% endif %}
+                </div>
+                <div class="ecocart-block-4-col-text__col-content">
+                    <h3>{{ title_3 }}</h3>
+                    {{ content_3|apply_filters('the_content') }}
+                </div>
+            </div>
+            <div class="ecocart-block-4-col-text__col">
+                <div class="ecocart-block-4-col-text__col-img">
+                    {% if animation == 'none' %}
+                        <img
+                            class="lazyload"
+                            data-src="{{ icon_4.src }}"
+                            data-sizes="auto"
+                            alt="{{ icon_4.alt|e }}"
+                        />
+                    {% else %}
+                        <div id="js-ecocart-block-4-col-text__{{ animation }}-animation-4" class="ecocart-lottie" data-animation-src="{{ animation_list[3] }}"></div>
+                    {% endif %}
+                </div>
+                <div class="ecocart-block-4-col-text__col-content">
+                    <h3>{{ title_4 }}</h3>
+                    {{ content_4|apply_filters('the_content') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

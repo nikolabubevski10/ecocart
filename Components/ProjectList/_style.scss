@@ -1,0 +1,273 @@
+.ecocart-project-list {
+  padding: 75px 0;
+  position: relative;
+}
+
+.ecocart-project-list-dot-wrapper {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.ecocart-project-list__bottom-dot {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+
+  img {
+    left: 0;
+    max-width: none;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
+
+.ecocart-project-list__top-dot {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  img {
+    left: 0;
+    max-width: none;
+    transform: translateX(-50%);
+  }
+}
+
+.ecocart-project-list__dropdown-label {
+  border: 1px solid $color-blue;
+  border-radius: 4px;
+  color: $color-dark-green;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  line-height: 1.71;
+  padding: 12px 50px 12px 15px;
+  position: relative;
+  user-select: none;
+
+  &.open {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &::after {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDExIDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xLjUgMUw1LjUgNUw5LjUgMSIgc3Ryb2tlPSIjMDA2Q0ZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    height: 6px;
+    position: absolute;
+    right: 18px;
+    top: 23px;
+    transition: transform 0.2s ease-out;
+    width: 11px;
+  }
+
+  span {
+    color: $color-blue;
+  }
+}
+
+.ecocart-project-list__card {
+  background: $color-white;
+  border-radius: 5px;
+  box-shadow: 0 2.1831px 13.0986px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.ecocart-project-list__card-location {
+  color: $color-black;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  line-height: 1.67;
+  margin-top: 15px;
+  padding-left: 32px;
+  position: relative;
+
+  &::before {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.ecocart-project-list__card-type {
+  color: $color-black;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  line-height: 1.67;
+  margin-top: 8px;
+  padding-left: 32px;
+  position: relative;
+
+  &::before {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.ecocart-project-list__card-content {
+  padding: 25px 32px 26px;
+  position: relative;
+
+  p {
+    margin-top: 9px;
+  }
+}
+
+.ecocart-project-list__grid {
+  margin-top: 55px;
+}
+
+.ecocart-project-list__card-image {
+  position: relative;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.ecocart-project-list__dropdown {
+  position: relative;
+}
+
+.ecocart-project-list__dropdown-list {
+  background-color: $color-white;
+  border-radius: 4px;
+  box-shadow: 0 2.1831px 13.0986px rgba(0, 0, 0, 0.15);
+  padding: 6px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.ecocart-project-list__dropdown-list-item {
+  cursor: pointer;
+  display: block;
+  padding: 6px 15px;
+  transition: background-color 0.2s ease-out;
+  user-select: none;
+
+  &:hover {
+    background-color: $color-teal;
+  }
+}
+
+.ecocart-project-list__map-wrapper {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  .mapboxgl-control-container {
+    display: none !important;
+  }
+}
+
+#js-ecocart-project-list__map {
+  height: 100%;
+  width: 100%;
+
+  .gm-ui-hover-effect {
+    display: none !important;
+  }
+}
+
+@media(max-width: 1199px) {
+  .ecocart-project-list__card-link {
+    margin-top: 40px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-project-list__card-image {
+    height: 290px;
+  }
+
+  .ecocart-project-list__top-dot {
+    display: none;
+  }
+
+  .ecocart-project-list__bottom-dot {
+    display: none;
+  }
+
+  .ecocart-project-list__filter-col+.ecocart-project-list__filter-col {
+    margin-top: 12px;
+  }
+
+  .ecocart-project-list__card+.ecocart-project-list__card {
+    margin-top: 24px;
+  }
+
+  .ecocart-project-list__map {
+    display: none;
+    margin-top: 55px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-project-list {
+    padding: 75px 0 180px;
+  }
+
+  .ecocart-project-list__grid {
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    margin-top: 30px;
+  }
+
+  .ecocart-project-list__card {
+    background: $color-white;
+    border-radius: 5px;
+    box-shadow: 0 2.1831px 13.0986px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    overflow: hidden;
+  }
+
+  .ecocart-project-list__card+.ecocart-project-list__card {
+    margin-top: 16px;
+  }
+
+  .ecocart-project-list__filter-row {
+    display: flex;
+  }
+
+  .ecocart-project-list__filter-col+.ecocart-project-list__filter-col {
+    margin-left: 16px;
+  }
+
+  .ecocart-project-list__dropdown-label {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media(min-width: 1200px) {
+  .ecocart-project-list__card-link {
+    bottom: 27px;
+    position: absolute;
+    right: 70px;
+  }
+}

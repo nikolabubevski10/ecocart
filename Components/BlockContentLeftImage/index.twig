@@ -1,0 +1,84 @@
+<section class="ecocart-block-content-left-image">
+    <div class="container">
+        <div class="dot-title">
+            <h3>{{ pre_title }}</h3>
+        </div>
+        <div class="ecocart-block-content-left-image__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile"
+            />
+        </div>
+        <div class="ecocart-block-content-left-image__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop"
+            />
+        </div>
+        <div class="ecocart-block-content-left-image__row">
+            <div class="ecocart-block-content-left-image__right-col">
+                <div class="ecocart-block-content-left-image__img-1" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image_1.width / 2, image_1.height / 2) }}"
+                        data-src="{{ image_1.src|resizeDynamic(image_1.width / 2) }}"
+                        data-srcset="{{ image_1.src|resizeDynamic(image_1.width / 2) }} 1x, {{ image_1.src|resizeDynamic(image_1.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image_1.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-block-content-left-image__img-2" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image_2.width / 2, image_2.height / 2) }}"
+                        data-src="{{ image_2.src|resizeDynamic(image_2.width / 2) }}"
+                        data-srcset="{{ image_2.src|resizeDynamic(image_2.width / 2) }} 1x, {{ image_2.src|resizeDynamic(image_2.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image_2.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-block-content-left-image__img-3" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image_3.width / 2, image_3.height / 2) }}"
+                        data-src="{{ image_3.src|resizeDynamic(image_3.width / 2) }}"
+                        data-srcset="{{ image_3.src|resizeDynamic(image_3.width / 2) }} 1x, {{ image_3.src|resizeDynamic(image_3.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image_3.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-block-content-left-image__img-4" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image_4.width / 2, image_4.height / 2) }}"
+                        data-src="{{ image_4.src|resizeDynamic(image_4.width / 2) }}"
+                        data-srcset="{{ image_4.src|resizeDynamic(image_4.width / 2) }} 1x, {{ image_4.src|resizeDynamic(image_4.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image_4.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-block-content-left-image__img-5" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="500">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image_5.width / 2, image_5.height / 2) }}"
+                        data-src="{{ image_5.src|resizeDynamic(image_5.width / 2) }}"
+                        data-srcset="{{ image_5.src|resizeDynamic(image_5.width / 2) }} 1x, {{ image_5.src|resizeDynamic(image_5.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image_5.alt|e }}"
+                    />
+                </div>
+            </div>
+            <div class="ecocart-block-content-left-image__left-col">
+                <h2>{{ title }}</h2>
+                {{ content|apply_filters('the_content') }}
+                <div class="ecocart-block-content-left-image__link">
+                    <a href="{{ link.url }}" class="btn btn--white">{{ link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

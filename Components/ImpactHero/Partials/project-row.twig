@@ -1,0 +1,5 @@
+<div class="ecocart-impact-hero__card-row">
+    {% for project in project_list %}
+        {% include 'Partials/project-card.twig' ignore missing with {project: project} only %}
+    {% endfor %}
+</div>

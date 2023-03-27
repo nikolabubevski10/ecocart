@@ -1,0 +1,3 @@
+{% for blog in blog_list %}
+    {% include 'Partials/blog-card.twig' ignore missing with {blog: blog} only %}
+{% endfor %}

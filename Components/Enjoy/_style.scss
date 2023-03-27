@@ -1,0 +1,97 @@
+.ecocart-enjoy {
+  overflow: hidden;
+  
+  .container {
+    padding-bottom: 64px;
+    padding-top: 67px;
+    position: relative;
+  }
+}
+
+.ecocart-enjoy__dot-desktop {
+  bottom: 0;
+  position: absolute;
+  right: -140px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-enjoy__content {
+  margin-top: 29px;
+
+  p {
+    margin-top: 14px;
+  }
+}
+
+.ecocart-enjoy__row {
+  margin-top: 64px;
+}
+
+#js-ecocart-enjoy__partners-animation-1 {
+  height: 160px;
+  margin: -26px 0 -30px -30px;
+  width: 177px;
+}
+
+#js-ecocart-enjoy__partners-animation-2 {
+  height: 160px;
+  margin: -26px 0 -30px -30px;
+  width: 177px;
+}
+
+#js-ecocart-enjoy__partners-animation-3 {
+  height: 160px;
+  margin: -26px 0 -30px -30px;
+  width: 177px;
+}
+
+#js-ecocart-enjoy__for-shoppers-animation-1 {
+  height: 160px;
+  margin: -26px 0 -30px -30px;
+  width: 177px;
+}
+
+#js-ecocart-enjoy__for-shoppers-animation-2 {
+  height: 160px;
+  margin: -26px 0 -30px -30px;
+  width: 177px;
+}
+
+#js-ecocart-enjoy__for-shoppers-animation-3 {
+  height: 160px;
+  margin: -26px 0 -30px -30px;
+  width: 177px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-enjoy__dot-desktop {
+    display: none;
+  }
+
+  .ecocart-enjoy__col+.ecocart-enjoy__col {
+    margin-top: 55px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-enjoy {
+    .container {
+      padding-bottom: 136px;
+      padding-top: 88px;
+    }
+  }
+
+  .ecocart-enjoy__row {
+    display: flex;
+    margin: 92px -30px 0;
+  }
+
+  .ecocart-enjoy__col {
+    padding: 0 30px;
+    width: 33.3333%;
+  }
+}

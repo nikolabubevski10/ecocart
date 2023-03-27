@@ -1,0 +1,511 @@
+.ecocart-features {
+  background-color: $color-dark-green;
+  position: relative;
+}
+
+.ecocart-features__content-col {
+  color: $color-white;
+
+  p {
+    margin-top: 27px;
+  }
+}
+
+.ecocart-features__right-dot-desktop {
+  bottom: 543px;
+  position: absolute;
+  right: -170px;
+  z-index: 1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-features__left-dot-desktop {
+  left: -145px;
+  position: absolute;
+  top: 590px;
+  z-index: 1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-features__right-dot-mobile {
+  position: absolute;
+  right: -20px;
+  top: 660px;
+  z-index: 1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-features__content-link {
+  margin-top: 27px;
+}
+
+.ecocart-features__row+.ecocart-features__row {
+  margin-top: 80px;
+}
+
+.ecocart-features__wrapper {
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.ecocart-features--bottom {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+
+  .container {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.ecocart-features--top {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  .container {
+    padding-bottom: 274px;
+    padding-top: 94px;
+    position: relative;
+  }
+}
+
+.ecocart-features--small-padding {
+  .container {
+    padding-bottom: 71px;
+    padding-top: 94px;
+  }
+}
+
+.ecocart-features__press {
+  background-color: $color-green;
+  border-radius: 4px;
+  bottom: -155px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  left: 40px;
+  padding: 64px 25px 50px;
+  position: absolute;
+  right: 40px;
+}
+
+.ecocart-features__press-title {
+  h3 {
+    color: $color-white;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    line-height: 1.26;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.ecocart-features__press-row {
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  margin-top: 43px;
+}
+
+#js-ecocart-features__animation-homepage-0 {
+  max-width: 533px;
+}
+
+#js-ecocart-features__animation-homepage-1 {
+  max-width: 528px;
+}
+
+#js-ecocart-features__animation-homepage-2 {
+  max-width: 588px;
+}
+
+#js-ecocart-features__animation-homepage-3 {
+  max-width: 480px;
+}
+
+#js-ecocart-features__animation-apparel-0 {
+  max-width: 533px;
+}
+
+#js-ecocart-features__animation-apparel-1 {
+  max-width: 528px;
+}
+
+#js-ecocart-features__animation-apparel-2 {
+  max-width: 588px;
+}
+
+#js-ecocart-features__animation-apparel-3 {
+  max-width: 480px;
+}
+
+#js-ecocart-features__animation-cosmetics-0 {
+  max-width: 533px;
+}
+
+#js-ecocart-features__animation-cosmetics-1 {
+  max-width: 528px;
+}
+
+#js-ecocart-features__animation-cosmetics-2 {
+  max-width: 588px;
+}
+
+#js-ecocart-features__animation-cosmetics-3 {
+  max-width: 480px;
+}
+
+#js-ecocart-features__animation-homegoods-0 {
+  max-width: 533px;
+}
+
+#js-ecocart-features__animation-homegoods-1 {
+  max-width: 528px;
+}
+
+#js-ecocart-features__animation-homegoods-2 {
+  max-width: 588px;
+}
+
+#js-ecocart-features__animation-homegoods-3 {
+  max-width: 480px;
+}
+
+#js-ecocart-features__animation-consumer-0 {
+  max-width: 533px;
+}
+
+#js-ecocart-features__animation-consumer-1 {
+  max-width: 528px;
+}
+
+#js-ecocart-features__animation-consumer-2 {
+  max-width: 588px;
+}
+
+#js-ecocart-features__animation-consumer-3 {
+  max-width: 480px;
+}
+
+.ecocart-features__press-col {
+  align-items: center;
+  display: flex;
+  height: 64px;
+
+  img {
+    max-height: 100%;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-features__content-col {
+    margin-top: 60px;
+  }
+
+  .ecocart-features__img-col {
+    text-align: center;
+  }
+
+  #js-ecocart-features__animation-homepage-0 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-homepage-1 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-homepage-2 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-homepage-3 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-apparel-0 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-apparel-1 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-apparel-2 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-apparel-3 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-cosmetics-0 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-cosmetics-1 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-cosmetics-2 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-cosmetics-3 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-homegoods-0 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-homegoods-1 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-homegoods-2 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-homegoods-3 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-consumer-0 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-consumer-1 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-consumer-2 {
+    margin: 0 auto;
+  }
+
+  #js-ecocart-features__animation-consumer-3 {
+    margin: 0 auto;
+  }
+
+  .ecocart-features__left-dot-desktop {
+    display: none;
+  }
+}
+
+@media(max-width: 699px) {
+  .ecocart-features__right-dot-desktop {
+    display: none;
+  }
+}
+
+@media(min-width: 500px) {
+  .ecocart-features__press-row {
+    grid-template-columns: repeat(3, auto);
+    row-gap: 20px;
+  }
+}
+
+@media(min-width: 650px) {
+  .ecocart-features__press-row {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+
+@media(min-width: 700px) {
+  .ecocart-features--top {
+    .container {
+      padding-bottom: 150px;
+    }
+  }
+
+  .ecocart-features__press {
+    padding: 64px 50px 50px;
+  }
+
+  .ecocart-features__right-dot-mobile {
+    display: none;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-features__press-row {
+    margin-top: 63px;
+  }
+
+  .ecocart-features--top {
+    .container {
+      padding-bottom: 409px;
+      padding-top: 137px;
+    }
+  }
+
+  .ecocart-features--small-padding {
+    .container {
+      padding-bottom: 96px;
+      padding-top: 137px;
+    }
+  }
+
+  .ecocart-features__wrapper {
+    margin-top: 156px;
+  }
+
+  .ecocart-features__row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ecocart-features__row+.ecocart-features__row {
+    margin-top: 190px;
+  }
+
+  .ecocart-features__img-col {
+    padding: 0 50px 0 0;
+  }
+  
+  .ecocart-features__row--reverse {
+    flex-direction: row-reverse;
+    
+    .ecocart-features__img-col {
+      padding: 0 0 0 50px;
+    }
+  }
+
+  .ecocart-features__content-col {
+    max-width: 440px;
+  }
+
+  .ecocart-features__press {
+    bottom: -90px;
+    padding: 76px 70px 96px;
+  }
+
+  .ecocart-features__press-title {
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  #js-ecocart-features__animation-homepage-0 {
+    height: 310px;
+    width: 533px;
+  }
+
+  #js-ecocart-features__animation-homepage-1 {
+    height: 497px;
+    width: 528px;
+  }
+
+  #js-ecocart-features__animation-homepage-2 {
+    height: 390px;
+    width: 588px;
+  }
+
+  #js-ecocart-features__animation-homepage-3 {
+    height: 497px;
+    width: 480px;
+  }
+
+  #js-ecocart-features__animation-apparel-0 {
+    height: 310px;
+    width: 533px;
+  }
+
+  #js-ecocart-features__animation-apparel-1 {
+    height: 497px;
+    width: 528px;
+  }
+
+  #js-ecocart-features__animation-apparel-2 {
+    height: 390px;
+    width: 588px;
+  }
+
+  #js-ecocart-features__animation-apparel-3 {
+    height: 497px;
+    width: 480px;
+  }
+
+  #js-ecocart-features__animation-cosmetics-0 {
+    height: 310px;
+    width: 533px;
+  }
+
+  #js-ecocart-features__animation-cosmetics-1 {
+    height: 497px;
+    width: 528px;
+  }
+
+  #js-ecocart-features__animation-cosmetics-2 {
+    height: 390px;
+    width: 588px;
+  }
+
+  #js-ecocart-features__animation-cosmetics-3 {
+    height: 497px;
+    width: 480px;
+  }
+
+  #js-ecocart-features__animation-homegoods-0 {
+    height: 310px;
+    width: 533px;
+  }
+
+  #js-ecocart-features__animation-homegoods-1 {
+    height: 497px;
+    width: 528px;
+  }
+
+  #js-ecocart-features__animation-homegoods-2 {
+    height: 390px;
+    width: 588px;
+  }
+
+  #js-ecocart-features__animation-homegoods-3 {
+    height: 497px;
+    width: 480px;
+  }
+
+  #js-ecocart-features__animation-consumer-0 {
+    height: 310px;
+    width: 533px;
+  }
+
+  #js-ecocart-features__animation-consumer-1 {
+    height: 497px;
+    width: 528px;
+  }
+
+  #js-ecocart-features__animation-consumer-2 {
+    height: 390px;
+    width: 588px;
+  }
+
+  #js-ecocart-features__animation-consumer-3 {
+    height: 497px;
+    width: 480px;
+  }
+}
+
+@media(min-width: 1150px) {
+  .ecocart-features__press-row {
+    margin-top: 83px;
+  }
+
+  .ecocart-features__press {
+    padding: 76px 100px 96px;
+  }
+}

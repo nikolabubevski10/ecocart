@@ -1,0 +1,120 @@
+.ecocart-block-content-image {
+  overflow: hidden;
+  padding: 52px 0 72px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-block-content-image__dot-1-desktop {
+  position: absolute;
+  right: -175px;
+  top: 180px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-block-content-image__dot-mobile {
+  position: absolute;
+  right: -20px;
+  top: 270px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-block-content-image__dot-2-desktop {
+  bottom: -175px;
+  position: absolute;
+  right: -175px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-block-content-image__image-1 {
+  margin: 51px -40px 0;
+}
+
+.ecocart-block-content-image__image-2 {
+  margin: 51px -40px 0;
+}
+
+.ecocart-block-content-image__image-3 {
+  margin: 51px -40px 0;
+}
+
+.ecocart-block-content-image__content {
+  margin-top: 40px;
+
+  p {
+    margin-top: 27px;
+  }
+}
+
+.ecocart-block-content-image__pre-title {
+  margin-top: 67px;
+}
+
+.ecocart-block-content-image__link {
+  margin-top: 28px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-block-content-image__dot-1-desktop {
+    display: none;
+  }
+  
+  .ecocart-block-content-image__dot-2-desktop {
+    display: none;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-block-content-image {
+    padding: 88px 0 119px;
+  }
+
+  .ecocart-block-content-image__content {
+    margin-top: 88px;
+  }
+
+  .ecocart-block-content-image__image-1 {
+    margin: 93px 0 0;
+  }
+
+  .ecocart-block-content-image__image-2 {
+    margin: 55px 0 0;
+  }
+
+  .ecocart-block-content-image__link {
+    margin: 40px 0 0;
+  }
+
+  .ecocart-block-content-image__pre-title {
+    margin-top: 124px;
+  }
+
+  .ecocart-block-content-image__row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .ecocart-block-content-image__dot-mobile {
+    display: none;
+  }
+
+  #js-ecocart-block-content-image__animation-carbon-offsetting-1 {
+    // height: 528px;
+    // width: 1120px;
+    max-width: 1120px;
+  }
+}

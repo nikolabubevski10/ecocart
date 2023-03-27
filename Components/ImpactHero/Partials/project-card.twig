@@ -1,0 +1,18 @@
+<div class="ecocart-impact-hero__card">
+    <div class="ecocart-impact-hero__card-img">
+        <img
+            class="lazyload"
+            src="{{ placeholderImage(236, 160) }}"
+            data-src="{{ project.thumbnail.src|resizeDynamic(236, 160) }}"
+            data-srcset="{{ project.thumbnail.src|resizeDynamic(236, 160) }} 1x, {{ project.thumbnail.src|resizeDynamic(472, 320) }} 2x"
+            data-sizes="auto"
+            alt="{{ project.thumbnail.alt|e }}"
+        />
+    </div>
+    <div class="ecocart-impact-hero__card-info-row">
+        <div class="ecocart-impact-hero__card-info-flag-col">
+            <div class="ecocart-impact-hero__card-info-flag fi-{{ project.meta('google_map_point').country_short|lower }}"></div>
+        </div>
+        <div class="ecocart-impact-hero__card-info-title-col">{{ project.title|length > 20 ? project.title|slice(0, 20) ~ '...' : project.title  }}</div>
+    </div>
+</div>

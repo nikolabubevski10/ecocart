@@ -1,0 +1,265 @@
+.ecocart-footer {
+  overflow: hidden;
+
+  .container {
+    padding-bottom: 40px;
+    padding-top: 66px;
+    position: relative;
+  }
+}
+
+.ecocart-footer-subscribe__form {
+  margin-top: 14px;
+
+  .gfield_label {
+    display: none;
+  }
+
+  .ginput_container {
+    input[type=text] {
+      border: 0;
+      border-bottom: 1px dashed $color-black;
+      color: $color-black;
+      font-size: 14px;
+      font-weight: $font-weight-bold;
+      padding: 13px 0;
+      width: 100%;
+
+      &::placeholder {
+        color: rgba($color-black, 0.5);
+      }
+    }
+  }
+
+  .gform_submission_error {
+    color: $color-red;
+    font-size: 12px;
+    line-height: 1.26;
+  }
+
+  .gfield_description {
+    color: $color-red;
+    font-size: 12px;
+    line-height: 1.26;
+  }
+
+  .gform_footer {
+    margin-top: 26px;
+
+    input[type=submit] {
+      @extend %btn;
+      @extend %btn--black;
+    }
+  }
+}
+
+.ecocart-footer-nav {
+  a {
+    color: $color-black;
+    font-size: 14px;
+    line-height: 1.26;
+    transition: color 0.2s ease-out;
+
+    &:hover {
+      color: $color-green;
+    }
+  }
+
+  li+li {
+    margin-top: 18px;
+  }
+}
+
+.ecocart-footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.ecocart-footer-subscribe__title {
+  h3 {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    line-height: 1.26;
+  }
+}
+
+.ecocart-footer-social__row {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.ecocart-footer-social__col {
+  &:hover {
+    a {
+      background-color: $color-dark-green;
+    }
+  }
+
+  a {
+    align-items: center;
+    background-color: $color-blue;
+    border-radius: 50%;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    transition: background-color 0.2s ease-out;
+    width: 36px;
+  }
+}
+
+.ecocart-footer-social__col + .ecocart-footer-social__col {
+  margin-left: 28px;
+}
+
+.ecocart-footer__dot-desktop {
+  position: absolute;
+  right: -40px;
+  top: 0;
+}
+
+.ecocart-footer__dot-mobile {
+  left: 200px;
+  position: absolute;
+  top: 30px;
+}
+
+.ecocart-footer-social__col--instagram {
+  svg {
+    height: auto;
+    width: 16px;
+  }
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-footer__logo {
+    svg {
+      height: auto;
+      width: 119px;
+    }
+  }
+
+  .ecocart-footer__logo-col {
+    margin-bottom: 46px;
+    width: 100%;
+  }
+
+  .ecocart-footer-social__col--facebook {
+    svg {
+      height: auto;
+      width: 16px;
+    }
+  }
+
+  .ecocart-footer-social__col--twitter {
+    svg {
+      height: auto;
+      width: 16px;
+    }
+  }
+
+  .ecocart-footer-social__col--linkedin {
+    svg {
+      height: auto;
+      width: 16px;
+    }
+  }
+
+  .ecocart-footer-social__row {
+    margin-top: 30px;
+  }
+
+  .ecocart-footer__dot-desktop {
+    display: none;
+  }
+}
+
+@media(max-width: 749px) {
+  .ecocart-footer__form-col {
+    margin-top: 46px;
+    width: 100%;
+  }
+
+  .ecocart-footer__nav-col-2 {
+    margin-left: 60px;
+  }
+
+  .ecocart-footer-subscribe__form {
+    max-width: 360px;
+  }
+}
+
+@media(max-width: 359px) {
+  .ecocart-footer__nav-col-1 {
+    width: 100%;
+  }
+
+  .ecocart-footer__nav-col-2 {
+    margin: 18px 0 0;
+    width: 100%;
+  }
+}
+
+@media(min-width: 750px) {
+  .ecocart-footer__row {
+    justify-content: space-between;
+  }
+
+  .ecocart-footer__form-col {
+    width: 340px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-footer {
+    .container {
+      padding-bottom: 98px;
+      padding-top: 93px;
+    }
+  }
+
+  .ecocart-footer__nav-col-1 {
+    padding-top: 15px;
+  }
+
+  .ecocart-footer__nav-col-2 {
+    padding-top: 15px;
+  }
+
+  .ecocart-footer-nav {
+    li+li {
+      margin-top: 23px;
+    }
+  }
+
+  .ecocart-footer__form-col {
+    padding-top: 17px;
+  }
+
+  .ecocart-footer-social__row {
+    justify-content: flex-end;
+  }
+
+  .ecocart-footer-social__col {
+    a {
+      height: 54px;
+      width: 54px;
+    }
+  }
+
+  .ecocart-footer-social__col+.ecocart-footer-social__col {
+    margin-left: 42px;
+  }
+
+  .ecocart-footer__dot-mobile {
+    display: none;
+  }
+
+  .ecocart-footer-social__col--instagram {
+    svg {
+      width: 23px;
+    }
+  }
+}

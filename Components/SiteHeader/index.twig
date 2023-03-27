@@ -1,0 +1,70 @@
+<header class="ecocart-header {% if post.white_header or white_header %}ecocart-header--white{% endif %} {% if post.header_has_dark_background %}ecocart-header--dark-bkg{% endif %}">
+    <div class="container">
+        <div class="ecocart-header__row">
+            <div class="ecocart-header__logo">
+                <a href="{{ site.url }}">
+                    {% if post.white_header or white_header %}
+                        {% include 'Assets/header-logo-white.svg' %}
+                    {% else %}
+                        {% include 'Assets/header-logo.svg' %}
+                    {% endif %}
+                </a>
+            </div>
+            <div class="ecocart-header__mobile-btn {% if post.white_header or white_header %}ecocart-header__mobile-btn--white{% endif %}">
+                <span></span>
+            </div>
+            <div id="js-ecocart-header__nav-wrapper" class="ecocart-header__nav-wrapper">
+                <div class="ecocart-header__nav-mobile-panel {% if post.white_header or white_header %}ecocart-header__nav-mobile-panel--white{% endif %}">
+                    <div class="ecocart-header__nav-mobile-panel-btn">
+                        <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M0.292893 7.29289C-0.0976314 7.68342 -0.0976315 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538407 7.04738 0.538407 6.65686 0.928931L0.292893 7.29289ZM21.25 7L1 7L1 9L21.25 9L21.25 7Z" fill="#0F8354"/></svg>
+                    </div>
+                    <div class="ecocart-header__nav-mobile-panel-info"></div>
+                </div>
+                <nav class="ecocart-header__nav {% if post.white_header or white_header %}ecocart-header__nav--white{% endif %}">
+                    <ul>
+                        {% for item in header_menu.items %}
+                        <li class="{{ item.classes | join(' ') }}">
+                            <a href="{{ item.link }}">{{ item.title }}</a>
+                            {% if item.children %}
+                                <div class="ecocart-header__nav-arrow-btn">
+                                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M20.9571 8.70711C21.3476 8.31658 21.3476 7.68342 20.9571 7.29289L14.5931 0.928932C14.2026 0.538408 13.5695 0.538408 13.1789 0.928932C12.7884 1.31946 12.7884 1.95262 13.1789 2.34315L18.8358 8L13.1789 13.6569C12.7884 14.0474 12.7884 14.6805 13.1789 15.0711C13.5695 15.4616 14.2026 15.4616 14.5931 15.0711L20.9571 8.70711ZM0 9L20.25 9V7L0 7L0 9Z" fill="#727C81"/></svg>
+                                </div>
+                                <div class="ecocart-header__nav-child-wrapper">
+                                    <div class="ecocart-header__nav-child-row">
+                                        {% for group in item.children %}
+                                            {% if group.children %}
+                                                <div class="ecocart-header__nav-child-group">
+                                                    {% for child in group.children %}
+                                                        <div class="ecocart-header__nav-child-group-label">
+                                                            <a href="{{ child.link }}">{{ child.title }}</a>
+                                                        </div>
+                                                        <div class="ecocart-header__nav-child-group-list {{ child.classes | join(' ') }}">
+                                                            {% if child.children %}
+                                                                <ul>
+                                                                    {% for childchild in child.children %}
+                                                                        <li>
+                                                                            <a href="{{ childchild.link }}">{{ childchild.title }}</a>
+                                                                        </li>
+                                                                    {% endfor %}
+                                                                </ul>
+                                                            {% endif %}
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <div class="ecocart-header__btn {% if post.white_header or white_header %}ecocart-header__btn--white{% endif %}">
+                    <a href="{{ right_link.url }}" class="ecocart-header__btn--desktop btn {% if post.white_header or white_header %}btn--white{% endif %}">{{ right_link.title }}</a>
+                    <a href="{{ right_link.url }}" class="ecocart-header__btn--mobile btn {% if post.white_header or white_header %}btn--white{% else %}btn--blue{% endif %}">{{ right_link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

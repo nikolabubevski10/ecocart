@@ -1,0 +1,126 @@
+.ecocart-job {
+  background-color: $color-dark-green;
+  color: $color-white;
+  padding: 67px 0;
+}
+
+.ecocart-job__card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 2.1831px 13.0986px rgba(0, 0, 0, 0.15);
+  padding: 36px 24px 46px;
+}
+
+.ecocart-job__card--last {
+  position: relative;
+
+  &::after {
+    background: linear-gradient(180deg, #001d2c 0%, rgba(0, 29, 44, 0) 100%);
+    bottom: 0;
+    content: '';
+    height: 86px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+}
+
+.ecocart-job__card-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.ecocart-job__card-info {
+  color: $color-white;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  line-height: 1.26;
+  margin-top: 21px;
+}
+
+.ecocart-job__card-info-date {
+  background-color: $color-black;
+  border-radius: 90px;
+  display: inline-block;
+  padding: 7px 18px;
+}
+
+.ecocart-job__card-row {
+  margin-top: 20px;
+}
+
+.ecocart-job__card-wrapper {
+  margin-top: 65px;
+}
+
+.ecocart-job__card-more-btn {
+  margin-top: 64px;
+  text-align: center;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-job__card-btn {
+    margin-top: 14px;
+  }
+
+  .ecocart-job__card+.ecocart-job__card {
+    margin-top: 24px;
+  }
+
+  .ecocart-job__card-info-date {
+    margin: 6px 12px 6px 0;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-job {
+    padding: 84px 0 40px;
+  }
+
+  .ecocart-job__card {
+    padding: 33px 32px 23px;
+  }
+
+  .ecocart-job__card-info {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.75;
+    margin-top: 19px;
+  }
+
+  .ecocart-job__card-info-date {
+    margin: 0 16px 0 0;
+    padding: 2px 16px;
+  }
+
+  .ecocart-job__card-row {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .ecocart-job__card-content {
+    max-width: 650px;
+  }
+
+  .ecocart-job__card+.ecocart-job__card {
+    margin-top: 32px;
+  }
+
+  .ecocart-job__card-wrapper {
+    margin-top: 84px;
+  }
+
+  .ecocart-job__card-btn {
+    padding-bottom: 9px;
+  }
+}
+
+@media(min-width: 1100px) {
+  .ecocart-job__card-content {
+    max-width: 730px;
+  }
+}

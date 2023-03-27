@@ -1,0 +1,88 @@
+<footer class="ecocart-footer">
+    <div class="container">
+        <div class="ecocart-footer__row">
+            <div class="ecocart-footer__logo-col">
+                <div class="ecocart-footer__logo">
+                    <a href="{{ site.url }}">{% include 'Assets/footer-logo.svg' %}</a>
+                </div>
+            </div>
+            <div class="ecocart-footer__nav-col-1">
+                <nav class="ecocart-footer-nav">
+                    <ul>
+                        {% for item in footer_menu_1.items %}
+                            <li class="{{ item.classes | join(' ') }}">
+                                <a href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="ecocart-footer__nav-col-2">
+                <nav class="ecocart-footer-nav">
+                    <ul>
+                        {% for item in footer_menu_2.items %}
+                            <li class="{{ item.classes | join(' ') }}">
+                                <a href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="ecocart-footer__form-col">
+                <div class="ecocart-footer-subscribe__title">
+                    <h3>{{ gravity_form_title }}</h3>
+                </div>
+                {% if gravity_form_shortcode and not remove_footer_form %}
+                    <div class="ecocart-footer-subscribe__form">
+                        {{ gravity_form_shortcode|shortcodes }}
+                    </div>
+                {% endif %}
+                {% if hubspot_form_code and not remove_footer_form %}
+                    <div class="ecocart-footer-subscribe__hbspt-form">
+                        <script>
+                            {{ hubspot_form_code }}
+                        </script>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="ecocart-footer-social__row">
+            {% if facebook_url %}
+                <div class="ecocart-footer-social__col ecocart-footer-social__col--facebook">
+                    <a href="{{ facebook_url }}">{% include 'Assets/facebook.svg' %}</a>
+                </div>
+            {% endif %}
+            {% if twitter_url %}
+                <div class="ecocart-footer-social__col ecocart-footer-social__col--twitter">
+                    <a href="{{ twitter_url }}">{% include 'Assets/twitter.svg' %}</a>
+                </div>
+            {% endif %}
+            {% if linkedin_url %}
+                <div class="ecocart-footer-social__col ecocart-footer-social__col--linkedin">
+                    <a href="{{ linkedin_url }}">{% include 'Assets/linkedin.svg' %}</a>
+                </div>
+            {% endif %}
+            {% if instagram_url %}
+                <div class="ecocart-footer-social__col ecocart-footer-social__col--instagram">
+                    <a href="{{ instagram_url }}">{% include 'Assets/instagram.svg' %}</a>
+                </div>
+            {% endif %}
+        </div>
+        <div class="ecocart-footer__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop image"
+            />
+        </div>
+        <div class="ecocart-footer__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile image"
+            />
+        </div>
+    </div>
+</footer>

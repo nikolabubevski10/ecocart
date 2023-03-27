@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="html {{ body_class }}" lang="{{ site.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ __('Feed', 'flynt') }}" href="{{ site.rss2 | e('esc_url') }}">
+    {% if is_home_page %}
+      <link rel="preload" as="image" href="{{ home_phone_svg }}" type="image/svg">
+    {% endif %}
+    
+    {{ function('wp_head') }}
+
+    {% if website_scripts.run_tracking_scripts %}
+      {{ website_scripts.before_head_closing_tag }}
+    {% endif %}
+
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+  </head>
+  <body>
+    {% if website_scripts.run_tracking_scripts %}
+      {{ website_scripts.after_body_opening_tag }}
+    {% endif %}
+
+    {% block header %}
+      {{ renderComponent('SiteHeader') }}
+    {% endblock %}
+    
+    {% block content %}
+      No <code>{{ '{% block content %}' }}</code> defined for this template.
+    {% endblock %}
+
+    {% block footer %}
+      {{ renderComponent('SiteFooter') }}
+    {% endblock %}
+    
+    {{ function('wp_footer') }}
+
+    {% if website_scripts.run_tracking_scripts %}
+      {{ website_scripts.begore_body_closing_tag }}
+    {% endif %}
+  
+    {# {% if post.page_has_google_map and googleMapsApiKey %}
+      <script src="https://maps.googleapis.com/maps/api/js?key={{ googleMapsApiKey }}&callback=initEcocartOffsetProjectMap" defer></script>
+    {% endif %} #}
+  </body>
+</html>

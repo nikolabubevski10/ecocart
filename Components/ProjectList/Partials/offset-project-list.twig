@@ -1,0 +1,3 @@
+{% for offsetProject in offsetProjects %}
+    {% include 'Partials/offset-project-card.twig' ignore missing with {offsetProject: offsetProject} only %}
+{% endfor %}

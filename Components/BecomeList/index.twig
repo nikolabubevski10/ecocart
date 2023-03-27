@@ -1,0 +1,115 @@
+<section class="ecocart-become-list">
+    <div class="container">
+        <div class="ecocart-become-list__dot">
+            <img
+                class="lazyload"
+                data-src="{{ dot }}"
+                data-sizes="auto"
+                alt="dot"
+            />
+        </div>
+        <div class="ecocart-become-list__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot"
+            />
+        </div>
+        <div class="dot-title">
+            <h3>{{ sub_title_1 }}</h3>
+        </div>
+        <div class="ecocart-become-list__top-wrapper">
+            <div class="ecocart-become-list__top-img">
+                {% if animation == 'none' %}
+                    <img
+                        class="lazyload"
+                        data-src="{{ image_1.src }}"
+                        data-sizes="auto"
+                        alt="{{ image_1.alt|e }}"
+                    />
+                {% else %}
+                    <div id="js-ecocart-become-list__{{ animation }}-animation-top" class="ecocart-lottie" data-animation-src="{{ animation_list['top'] }}"></div>
+                {% endif %}
+            </div>
+            <div class="ecocart-become-list__top">
+                <h2>{{ title_1 }}</h2>
+                <p>{{ content_1 }}</p>
+            </div>
+        </div>
+        {% for index, item in list %}
+            <div class="ecocart-become-list__row {% if index % 2 == 1 %}ecocart-become-list__row-reverse{% endif %}">
+                <div class="ecocart-become-list__img-col">
+                    {% if animation == 'none' %}
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(item.image.width / 2, item.image.height / 2) }}"
+                            data-src="{{ item.image.src|resizeDynamic(item.image.width / 2) }}"
+                            data-srcset="{{ item.image.src|resizeDynamic(item.image.width / 2) }} 1x, {{ item.image.src|resizeDynamic(item.image.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ item.image.alt|e }}"
+                        />
+                    {% else %}
+                        <div id="js-ecocart-become-list__{{ animation }}-animation-{{ index }}" class="ecocart-lottie" data-animation-src="{{ animation_list['middle'][index] }}"></div>
+                    {% endif %}
+                </div>
+                <div class="ecocart-become-list__content-col">
+                    <div class="ecocart-become-list__content-col-inner">
+                        <h2>{{ item.title }}</h2>
+                        <p>{{ item.content }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="ecocart-become-list__bottom-title">
+            <div class="dot-title">
+                <h3>{{ sub_title_2 }}</h3>
+            </div>
+        </div>
+        <div class="ecocart-become-list__bottom-img">
+            {% if animation == 'none' %}
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image_2.width / 2, image_2.height / 2) }}"
+                    data-src="{{ image_2.src|resizeDynamic(image_2.width / 2) }}"
+                    data-srcset="{{ image_2.src|resizeDynamic(image_2.width / 2) }} 1x, {{ image_2.src|resizeDynamic(image_2.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image_2.alt|e }}"
+                />
+            {% else %}
+                <div id="js-ecocart-become-list__{{ animation }}-animation-bottom" class="ecocart-lottie" data-animation-src="{{ animation_list['bottom'] }}"></div>
+            {% endif %}
+        </div>
+        <div class="ecocart-become-list__afford-title">
+            <div class="dot-title">
+                <h3>{{ sub_title_3 }}</h3>
+            </div>
+        </div>
+        <div class="ecocart-become-list__afford-grid">
+            {% for afford in afford_list %}
+                <div class="ecocart-become-list__afford-card">
+                    <div class="ecocart-become-list__afford-card-img">
+                        <img
+                            class="lazyload"
+                            data-src="{{ afford.image.src }}"
+                            data-sizes="auto"
+                            alt="{{ afford.image.alt|e }}"
+                        />
+                    </div>
+                    <div class="ecocart-become-list__afford-card-title">
+                        <h2>{{ afford.title }}</h2>
+                    </div>
+                    <div class="ecocart-become-list__afford-card-price">
+                        <p>{{ afford.price }}</p>
+                    </div>
+                    <div class="ecocart-become-list__afford-card-content">
+                        <p>{{ afford.content }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="ecocart-become-list__afford-link">
+            <a class="btn btn--black" href="{{ afford_link.url }}">{{ afford_link.title }}</a>
+        </div>
+    </div>
+</section>

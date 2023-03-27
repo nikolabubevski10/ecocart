@@ -1,0 +1,210 @@
+.ecocart-sustainable-list {
+  overflow: hidden;
+  padding: 90px 0 53px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-sustainable-list__dot {
+  left: -130px;
+  position: absolute;
+  top: -124px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-sustainable-list__dot-mobile-top {
+  left: -120px;
+  position: absolute;
+  top: 40px;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-sustainable-list__dot-mobile-middle {
+  left: -20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-sustainable-list__dot-mobile-bottom {
+  bottom: 80px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+
+  img {
+    max-width: none;
+  }
+}
+
+.ecocart-sustainable-list__content-col-inner {
+  p {
+    margin-top: 25px;
+  }
+}
+
+.ecocart-sustainable-list__img {
+  margin-top: 33px;
+}
+
+#js-ecocart-sustainable-list__sustainable-shopping-long-animation {
+  margin: 0 auto;
+  max-width: 1233px;
+}
+
+#js-ecocart-sustainable-list__sustainable-shopping-animation-0 {
+  margin: 0 auto;
+  max-width: 528px;
+}
+
+#js-ecocart-sustainable-list__sustainable-shopping-animation-1 {
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+#js-ecocart-sustainable-list__sustainable-shopping-animation-2 {
+  margin: 0 auto;
+  max-width: 586px;
+}
+
+#js-ecocart-sustainable-list__sustainable-shopping-animation-3 {
+  margin: 0 auto;
+  max-width: 472px;
+}
+
+#js-ecocart-sustainable-list__sustainable-shopping-animation-4 {
+  margin: 0 auto;
+  max-width: 592px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-sustainable-list__dot {
+    display: none;
+  }
+
+  .ecocart-sustainable-list__content-col {
+    margin-top: 40px;
+  }
+
+  .ecocart-sustainable-list__row {
+    margin-top: 78px;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-sustainable-list {
+    padding: 124px 0 0;
+  }
+
+  .ecocart-sustainable-list__img {
+    margin-top: 50px;
+  }
+
+  .ecocart-sustainable-list__row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .ecocart-sustainable-list__content-col-inner {
+      padding-left: 80px;
+    }
+  }
+
+  .ecocart-sustainable-list__row--reverse {
+    flex-direction: row-reverse;
+
+    .ecocart-sustainable-list__content-col-inner {
+      max-width: 447px;
+      padding-left: 0;
+    }
+  }
+
+  .ecocart-sustainable-list__content-col {
+    width: 500px;
+  }
+
+  .ecocart-sustainable-list__img-col {
+    max-width: 500px;
+
+    img {
+      max-width: none;
+    }
+  }
+
+  .ecocart-sustainable-list__row-0 {
+    margin-top: var(--ecocart-sustainable-list__row-0-top-space-desktop);
+  }
+
+  .ecocart-sustainable-list__row-1 {
+    margin-top: var(--ecocart-sustainable-list__row-1-top-space-desktop);
+  }
+
+  .ecocart-sustainable-list__row-2 {
+    margin-top: var(--ecocart-sustainable-list__row-2-top-space-desktop);
+  }
+
+  .ecocart-sustainable-list__row-3 {
+    margin-top: var(--ecocart-sustainable-list__row-3-top-space-desktop);
+  }
+
+  .ecocart-sustainable-list__row-4 {
+    margin-top: var(--ecocart-sustainable-list__row-4-top-space-desktop);
+  }
+
+  // #js-ecocart-sustainable-list__sustainable-shopping-long-animation{
+  //   width: 1233px;
+  //   height: 530px;
+  // }
+
+  #js-ecocart-sustainable-list__sustainable-shopping-animation-0 {
+    height: 497px;
+    width: 528px;
+  }
+
+  #js-ecocart-sustainable-list__sustainable-shopping-animation-1 {
+    height: 497px;
+    width: 480px;
+  }
+
+  #js-ecocart-sustainable-list__sustainable-shopping-animation-2 {
+    height: 497px;
+    width: 586px;
+  }
+
+  #js-ecocart-sustainable-list__sustainable-shopping-animation-3 {
+    height: 368px;
+    width: 472px;
+  }
+
+  #js-ecocart-sustainable-list__sustainable-shopping-animation-4 {
+    height: 599px;
+    width: 592px;
+  }
+
+  .ecocart-sustainable-list__dot-mobile-top {
+    display: none;
+  }
+  
+  .ecocart-sustainable-list__dot-mobile-middle {
+    display: none;
+  }
+  
+  .ecocart-sustainable-list__dot-mobile-bottom {
+    display: none;
+  }
+}

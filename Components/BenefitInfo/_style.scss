@@ -1,0 +1,159 @@
+.ecocart-benefit-info {
+  background-color: $color-dark-green;
+  color: $color-white;
+  overflow: hidden;
+  padding: 64px 0;
+
+  .container {
+    position: relative;
+  }
+}
+
+.ecocart-benefit-info__dot-desktop {
+  bottom: -75px;
+  position: absolute;
+  right: -130px;
+}
+
+.ecocart-benefit-info__dot-mobile {
+  left: 143px;
+  position: absolute;
+  top: 128px;
+}
+
+.ecocart-benefit-info__animation {
+  height: 287px;
+  position: relative;
+  width: 290px;
+
+  img {
+    position: absolute;
+  }
+}
+
+.ecocart-benefit-info__left-col {
+  padding: 65px 0 0;
+
+  p {
+    margin-top: 27px;
+  }
+}
+
+.ecocart-benefit-info__row {
+  margin-top: 60px;
+}
+
+@media(max-width: $breakpoint-mobile-start-max) {
+  .ecocart-benefit-info__animation {
+    margin: 0 auto;
+  }
+
+  .ecocart-benefit-info__dot-desktop {
+    display: none;
+  }
+
+  .ecocart-benefit-info__animation-img-1 {
+    left: 0;
+    top: 35px;
+    width: 152px;
+    z-index: 1;
+  }
+
+  .ecocart-benefit-info__animation-img-2 {
+    left: 48px;
+    top: 100px;
+    width: 190px;
+    z-index: 2;
+  }
+
+  .ecocart-benefit-info__animation-img-3 {
+    left: 0;
+    top: 190px;
+    width: 152px;
+    z-index: 3;
+  }
+
+  .ecocart-benefit-info__animation-popup-1 {
+    left: 60px;
+    top: -18px;
+    width: 190px;
+    z-index: 4;
+  }
+
+  .ecocart-benefit-info__animation-popup-2 {
+    left: 122px;
+    top: 67px;
+    width: 190px;
+    z-index: 5;
+  }
+
+  .ecocart-benefit-info__animation-popup-3 {
+    left: 120px;
+    top: 196px;
+    width: 190px;
+    z-index: 6;
+  }
+}
+
+@media(min-width: $breakpoint-mobile-start-min) {
+  .ecocart-benefit-info {
+    padding: 108px 0 117px;
+  }
+
+  .ecocart-benefit-info__row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+
+  .ecocart-benefit-info__left-col {
+    max-width: 600px;
+    padding: 56px 50px 0 0;
+  }
+
+  .ecocart-benefit-info__animation {
+    height: 454px;
+    width: 460px;
+  }
+
+  .ecocart-benefit-info__animation-img-1 {
+    left: 0;
+    top: 56px;
+    z-index: 1;
+  }
+
+  .ecocart-benefit-info__animation-img-2 {
+    left: 73px;
+    top: 156px;
+    z-index: 2;
+  }
+
+  .ecocart-benefit-info__animation-img-3 {
+    left: 0;
+    top: 301px;
+    z-index: 3;
+  }
+
+  .ecocart-benefit-info__animation-popup-1 {
+    left: 95px;
+    top: -29px;
+    z-index: 4;
+  }
+
+  .ecocart-benefit-info__animation-popup-2 {
+    left: 193px;
+    top: 106px;
+    z-index: 5;
+  }
+
+  .ecocart-benefit-info__animation-popup-3 {
+    left: 190px;
+    top: 309px;
+    z-index: 6;
+  }
+
+  .ecocart-benefit-info__dot-mobile {
+    display: none;
+  }
+}

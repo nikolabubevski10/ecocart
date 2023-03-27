@@ -1,0 +1,35 @@
+<section class="ecocart-request-demo">
+    <div class="container">
+        <div class="ecocart-request-demo__dot">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot"
+            />
+        </div>
+        <div class="ecocart-request-demo__row">
+            <div class="ecocart-request-demo__content-col">
+                <div class="ecocart-request-demo__content-inner">
+                    <div class="ecocart-request-demo__content-image">
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(400, 400) }}"
+                            data-src="{{ image.src|resizeDynamic(400, 400) }}"
+                            data-srcset="{{ image.src|resizeDynamic(400, 400) }} 1x, {{ image.src|resizeDynamic(800, 800) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ image.alt|e }}"
+                        />
+                    </div>
+                    <div class="ecocart-request-demo__content-info">
+                        <h1>{{ title }}</h1>
+                        <p>{{ content }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ecocart-request-demo__form-col">
+                <script>{{ hubspot_code }}</script>
+            </div>
+        </div>
+    </div>
+</section>

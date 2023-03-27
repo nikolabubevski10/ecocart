@@ -1,0 +1,64 @@
+<section class="ecocart-integrations">
+    <div class="container">
+        <div class="ecocart-integrations__top-dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ top_dot_desktop }}"
+                data-sizes="auto"
+                alt="top dot desktop"
+            />
+        </div>
+        <div class="ecocart-integrations__bottom-dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ bottom_dot_desktop }}"
+                data-sizes="auto"
+                alt="bottom dot desktop"
+            />
+        </div>
+        <div class="ecocart-integrations__top-dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ top_dot_mobile }}"
+                data-sizes="auto"
+                alt="top dot mobile"
+            />
+        </div>
+        <div class="ecocart-integrations__bottom-dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ bottom_dot_mobile }}"
+                data-sizes="auto"
+                alt="bottom dot mobile"
+            />
+        </div>
+        <div class="ecocart-integrations__inner">
+            <div class="ecocart-integrations__hero-title">
+                <h1>{{ title }}</h1>
+            </div>
+            <div class="ecocart-integrations__hero-content">
+                <p>{{ content }}</p>
+            </div>
+            <div class="ecocart-integrations__grid">
+                {% for integration in integration_list %}
+                    <div class="ecocart-integrations__card">
+                        <div class="ecocart-integrations__card-img">
+                            <img
+                                class="lazyload"
+                                data-src="{{ integration.image.src }}"
+                                data-sizes="auto"
+                                alt="{{ integration.image.alt|e }}"
+                            />
+                        </div>
+                        <div class="ecocart-integrations__card-txt">
+                            <p>{{ integration.content }}</p>
+                        </div>
+                        <div class="ecocart-integrations__card-link">
+                            <a href="{{ integration.link.url }}" class="btn">{{ integration.link.title }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

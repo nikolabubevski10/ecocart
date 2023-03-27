@@ -1,0 +1,47 @@
+<section class="ecocart-we-do">
+    <div class="container">
+        <div class="ecocart-we-do-dot-1">
+            <img src="{{ dot_1 }}" alt="dot image">
+        </div>
+        <div class="ecocart-we-do-dot-2">
+            <img src="{{ dot_2 }}" alt="dot image">
+        </div>
+        <div class="ecocart-we-do-dot__mobile-top">
+            <img src="{{ dot_mobile_top }}" alt="dot image">
+        </div>
+        <div class="ecocart-we-do-dot__mobile-bottom">
+            <img src="{{ dot_mobile_bottom }}" alt="dot image">
+        </div>
+        <div class="dot-title">
+            <h3>{{ title }}</h3>
+        </div>
+        {% for index, item in list %}
+            <div
+                class="ecocart-we-do__row ecocart-we-do__row-{{ index }} {% if index % 2 != 1 %}ecocart-we-do__row--reverse{% endif %}"
+                style="
+                    --ecocart-we-do__row-{{ index }}-top-space-desktop: {{ item.top_space.desktop }}px;
+                    --ecocart-we-do__row-{{ index }}-top-space-mobile: {{ item.top_space.mobile }}px;
+                "
+            >
+                <div class="ecocart-we-do__img-col">
+                    {% if animation == 'none' %}
+                        <img
+                            class="lazyload"
+                            src="{{ placeholderImage(item.image.width / 2, item.image.height / 2) }}"
+                            data-src="{{ item.image.src|resizeDynamic(item.image.width / 2) }}"
+                            data-srcset="{{ item.image.src|resizeDynamic(item.image.width / 2) }} 1x, {{ item.image.src|resizeDynamic(item.image.width) }} 2x"
+                            data-sizes="auto"
+                            alt="{{ item.image.alt|e }}"
+                        />
+                    {% else %}
+                        <div id="js-ecocart-we-do__{{ animation }}-animation-{{ index }}" class="ecocart-lottie" data-animation-src="{{ animation_list[animation][index] }}"></div>
+                    {% endif %}
+                </div>
+                <div class="ecocart-we-do__content-col">
+                    <h2>{{ item.title }}</h2>
+                    <p>{{ item.content }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

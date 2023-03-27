@@ -1,0 +1,54 @@
+<section class="ecocart-integration-hero">
+    <div class="container">
+        <div class="ecocart-integration-hero__dot-desktop">
+            <img
+                class="lazyload"
+                data-src="{{ dot_desktop }}"
+                data-sizes="auto"
+                alt="dot desktop"
+            />
+        </div>
+        <div class="ecocart-integration-hero__dot-mobile">
+            <img
+                class="lazyload"
+                data-src="{{ dot_mobile }}"
+                data-sizes="auto"
+                alt="dot mobile"
+            />
+        </div>
+        <div class="ecocart-integration-hero__back">
+            <a class="back-link back-link--blue" href="#">Back To Recources</a>
+        </div>
+        <div class="ecocart-integration-hero__row">
+            <div class="ecocart-integration-hero__right-col">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                    data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                    data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ image.alt|e }}"
+                />
+            </div>
+            <div class="ecocart-integration-hero__left-col">
+                <div class="ecocart-integration-hero__logo">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(213, 53) }}"
+                        data-src="{{ logo.src|resizeDynamic(213, 53, 'center') }}"
+                        data-srcset="{{ logo.src|resizeDynamic(213, 53, 'center') }} 1x, {{ image_1.src|resizeDynamic(426, 106, 'center') }} 2x"
+                        data-sizes="auto"
+                        alt="{{ logo.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-integration-hero__content">
+                    <h1>{{ title }}</h1>
+                    {{ content|apply_filters('the_content') }}
+                </div>
+                <div class="ecocart-integration-hero__link">
+                    <a class="btn btn--blue" href="{{ link.url }}">{{ link.title }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

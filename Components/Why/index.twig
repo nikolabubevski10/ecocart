@@ -1,0 +1,43 @@
+<section class="ecocart-why">
+    <div class="ecocart-why__dot-desktop">
+        <img
+            class="lazyload"
+            data-src="{{ dot_desktop }}"
+            data-sizes="auto"
+            alt="dot desktop"
+        />
+    </div>
+    <div class="ecocart-why__dot-mobile">
+        <img
+            class="lazyload"
+            data-src="{{ dot_mobile }}"
+            data-sizes="auto"
+            alt="dot mobile"
+        />
+    </div>
+    <div class="ecocart-why__content">
+        <div class="container">
+            <div class="dot-title">
+                <h3>{{ pre_title }}</h3>
+            </div>
+            <div class="ecocart-why__row">
+                <div class="ecocart-why__right-col">
+                    <img
+                        class="lazyload"
+                        src="{{ placeholderImage(image.width / 2, image.height / 2) }}"
+                        data-src="{{ image.src|resizeDynamic(image.width / 2) }}"
+                        data-srcset="{{ image.src|resizeDynamic(image.width / 2) }} 1x, {{ image.src|resizeDynamic(image.width) }} 2x"
+                        data-sizes="auto"
+                        alt="{{ image.alt|e }}"
+                    />
+                </div>
+                <div class="ecocart-why__left-col">
+                    <h2>{{ title }}</h2>
+                    <div class="ecocart-why__list">
+                        {{ content|apply_filters('the_content') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

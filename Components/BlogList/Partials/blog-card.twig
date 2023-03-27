@@ -1,0 +1,23 @@
+<div class="ecocart-blog-list__grid-item">
+    <a href="{{ blog.link }}">
+        <div class="ecocart-blog-list__card">
+            <div class="ecocart-blog-list__card-img">
+                <img
+                    class="lazyload"
+                    src="{{ placeholderImage(360, 190) }}"
+                    data-src="{{ blog.thumbnail.src|resizeDynamic(360, 190) }}"
+                    data-srcset="{{ blog.thumbnail.src|resizeDynamic(360, 190) }} 1x, {{ blog.thumbnail.src|resizeDynamic(720, 380) }} 2x"
+                    data-sizes="auto"
+                    alt="{{ blog.thumbnail.alt|e }}"
+                />
+            </div>
+            <div class="ecocart-blog-list__card-content">
+                <div class="ecocart-blog-list__card-cat">
+                    <span>{{ blog.category }}</span>
+                </div>
+                <h4>{{ blog.title }}</h4>
+                <p>{{ blog.post_excerpt }}</p>
+            </div>
+        </div>
+    </a>
+</div>

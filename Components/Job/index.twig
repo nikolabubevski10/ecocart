@@ -1,0 +1,32 @@
+<section {% if section_id %}id="{{ section_id }}"{% endif %} class="ecocart-job">
+    <div class="container">
+        <div class="dot-title">
+            <h3>{{ pre_title }}</h3>
+        </div>
+        <div class="ecocart-job__card-wrapper">
+            {% for index, job in job_list %}
+                <div class="ecocart-job__card {% if index > 3 %}ecocart-hide{% endif %} {% if index == 3 %}ecocart-job__card--last{% endif %}">
+                    <div class="ecocart-job__card-inner">
+                        <div class="ecocart-job__card-title">
+                            <h3>{{ job.title }}</h3>
+                        </div>
+                        <div class="ecocart-job__card-info">
+                            <div class="ecocart-job__card-info-date">Posted: {{ job.post_date }}</div>
+                        </div>
+                        <div class="ecocart-job__card-row">
+                            <div class="ecocart-job__card-content">
+                                <p>{{ job.description }}</p>
+                            </div>
+                            <div class="ecocart-job__card-btn">
+                                <a class="btn btn--blue--dark" href="{{ job.link.url }}">{{ job.link.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="ecocart-job__card-more-btn">
+            <button id="js-ecocart-job__more-btn" class="btn btn--blue--dark">See More Jobs</button>
+        </div>
+    </div>
+</section>
